@@ -1,15 +1,15 @@
 @charset "UTF-8";
 /*!
- * FlatifyCSS version 2.0.0
- * Modern flat design framework for the web — inspired by Duolingo design system. 
- * Copyright 2021-2022 The FlatifyCSS Authors
- * Licensed under MIT (https://github.com/amir2mi/flatifycss/blob/master/LICENSE)
+ * FlatifyCSS version 2.0.1
+ * Modern flat design framework for the web, inspired by Duolingo design system. 
+ * Copyright 2021-2026 The FlatifyCSS Authors
+ * Licensed under MIT (https://github.com/ami-momo/flatifycss/blob/master/LICENSE)
  */
 :root {
   --flatify__border-width: max(2px, 0.18em);
   --flatify__border-radius: 1em;
   --flatify__hover-brightness: 95%;
-  --flatify__backdrop-opacity: 0.35;
+  --flatify__backdrop-opacity: 0.5;
   --flatify__max-font-size: 100%;
   --flatify__min-font-size: 85%;
   --flatify__primary-font-family: Nunito, sans-serif;
@@ -4678,8 +4678,8 @@ textarea:not(.default) {
 
 @media (prefers-reduced-motion: reduce) {
   body *,
-body ::before,
-body ::after {
+  body ::before,
+  body ::after {
     background-attachment: initial !important;
     scroll-behavior: auto !important;
   }
@@ -4689,8 +4689,8 @@ body ::after {
     --flatify__bouncing-transition: 0s !important;
   }
   body .dropdown.show,
-body .modal.show,
-body .tab-panel.show {
+  body .modal.show,
+  body .tab-panel.show {
     animation-name: flatify-fade-in !important;
   }
   body .menu-item:focus-within > .submenu, body .menu-item:hover > .submenu {
@@ -4738,7 +4738,6 @@ body .tab-panel.show {
     animation-timing-function: steps(4, end) !important;
     animation-duration: 2s !important;
   }
-
   @keyframes flatify-pulse {
     0%, 100% {
       transform: scale(1.25);
@@ -4749,5 +4748,4 @@ body .tab-panel.show {
       opacity: 0.5;
     }
   }
-}
-/*# sourceMappingURL=../maps/flatify-noprefix.css.map */
+}/*# sourceMappingURL=../maps/flatify-noprefix.css.map */

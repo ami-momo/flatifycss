@@ -4,7 +4,9 @@ All notable changes to this project are documented here. The format is based on 
 
 ## [Unreleased]
 
-Suggested version: 2.0.1 (patch). Nothing new for users to learn, a few fixes and a new home for the docs.
+## [2.0.1] - 2026-11-22
+
+Nothing new to learn, a few fixes and a new home for the docs.
 
 ### Fixed
 
@@ -33,5 +35,6 @@ Suggested version: 2.0.1 (patch). Nothing new for users to learn, a few fixes an
 
 - Right to left support uses CSS logical properties, one stylesheet works for both directions.
 
-[Unreleased]: https://github.com/ami-momo/flatifycss/compare/v2.0.0...HEAD
+[Unreleased]: https://github.com/ami-momo/flatifycss/compare/v2.0.1...HEAD
+[2.0.1]: https://github.com/ami-momo/flatifycss/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/ami-momo/flatifycss/releases/tag/v2.0.0

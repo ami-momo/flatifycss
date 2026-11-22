@@ -19,7 +19,7 @@ It is simply a wrapper `.fireworks` with three elements inside that have the `.s
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Fireworks</title>
 	</head>
 	<body>
@@ -46,7 +46,7 @@ It is simply a wrapper `.fireworks` with three elements inside that have the `.s
 ```
 
 :::info Accessibility matters!
-This element does not have meaning for assistive technologies and it is just a fancy ornate, thus we should hide it from the accessibility tree by setting `aria-hidden="true"`.  
+This element does not have meaning for assistive technologies and it is just a fancy ornate, thus you should hide it from the accessibility tree by setting `aria-hidden="true"`.  
 [Read more about `aria-hidden`](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-hidden_attribute).
 :::
 
@@ -63,7 +63,7 @@ You can add the `.simple` class to the `.fireworks`, it will remove the main glo
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Fireworks</title>
 	</head>
 	<body>
@@ -103,7 +103,7 @@ These classes just set a `font-size` property so it is possible to change it you
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Fireworks</title>
 	</head>
 	<body>
@@ -142,17 +142,23 @@ These classes just set a `font-size` property so it is possible to change it you
 
 Fireworks can be customized with CSS variables that is defined for it. Here is the list of them:
 
-Color:  
-`--flatify__firework-color-main`  
-`--flatify__firework-color-center-top-bottom`  
-`--flatify__firework-color-center-left-right`  
-`--flatify__firework-color-left-top-bottom`  
-`--flatify__firework-color-right-top-bottom`
+Color:
 
-Animation:  
-`--flatify__firework-animation-delay`  
-`--flatify__firework-animation-duration`  
-`--flatify__firework-animation-iteration-count`
+| Variable | Default |
+| --- | --- |
+| `--flatify__firework-color-main` | `var(--flatify__color-blue-primary)` |
+| `--flatify__firework-color-center-top-bottom` | `var(--flatify__color-blue-primary)` |
+| `--flatify__firework-color-center-left-right` | `var(--flatify__color-blue-primary)` |
+| `--flatify__firework-color-left-top-bottom` | `var(--flatify__color-purple-primary)` |
+| `--flatify__firework-color-right-top-bottom` | `var(--flatify__color-purple-primary)` |
+
+Animation:
+
+| Variable | Default |
+| --- | --- |
+| `--flatify__firework-animation-delay` | `0s` |
+| `--flatify__firework-animation-duration` | `4s` |
+| `--flatify__firework-animation-iteration-count` | `infinite` |
 
 The example below shows how to use this variables:
 
@@ -165,7 +171,7 @@ The example below shows how to use this variables:
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Fireworks</title>
         <style>
             .my-custom-fireworks-1,
@@ -246,7 +252,7 @@ The example below shows how to use this variables:
 }
 ```
 
-:::success Dynamic color for fireworks
+:::tip Dynamic color for fireworks
 FlatifyCSS has [predefined animation and helper classes](/docs/helpers/animation) to change the element hue, you can use `flatify-hue` and `flatify-hue-min` animations or directly set animation setter helper classes that are `.anim-hue` and `.anim-hue-min`.
 
 <PreviewBox
@@ -258,7 +264,7 @@ FlatifyCSS has [predefined animation and helper classes](/docs/helpers/animation
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Fireworks</title>
 	</head>
 	<body>

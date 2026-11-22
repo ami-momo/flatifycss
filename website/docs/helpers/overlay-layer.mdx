@@ -1,6 +1,6 @@
 ---
 title: Overlay layer
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 import PreviewBox from "../../src/components/preview-box";
@@ -10,13 +10,15 @@ FlatifyCSS gives you a helper class called `.overlay-layer`, it does the same th
 
 Overlay layers have a couple of CSS variables to make them more flexible:
 
-`--flatify__overlay-layer-priority` `z-index` property of the overlay layer, default is 10  
-`--flatify__overlay-layer-bg-color` By default inherits darker background color
-`--flatify__overlay-layer-opacity` Default is 1 which means 100%  
-`--flatify__overlay-layer-blending-mode` Default is `normal`  
-`--flatify__overlay-layer-backdrop-filter` Default is `none`
+| Variable | Default | Notes |
+| --- | --- | --- |
+| `--flatify__overlay-layer-priority` | `10` | The `z-index` of the layer |
+| `--flatify__overlay-layer-bg-color` | `var(--flatify__bg-color)` | Same as the page background |
+| `--flatify__overlay-layer-opacity` | `1` | 1 means 100% |
+| `--flatify__overlay-layer-blending-mode` | `normal` | Any [`mix-blend-mode`](https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode) value |
+| `--flatify__overlay-layer-backdrop-filter` | `none` | Any [`backdrop-filter`](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter) value |
 
-In the below example, we have a box with an image inside it, basically, we need an overlay layer to change image color with [`mix-blend-mode` CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode) and add some effect with [`backdrop-filter` CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter).
+In the example below there is a box with an image inside it, and an overlay layer changes the image color with [`mix-blend-mode` CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode) and add some effect with [`backdrop-filter` CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter).
 
 <PreviewBox
 	height="710px"
@@ -26,7 +28,7 @@ In the below example, we have a box with an image inside it, basically, we need 
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Overlay layer</title>
         <style>
             .my-img-fx{

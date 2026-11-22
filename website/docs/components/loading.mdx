@@ -12,7 +12,7 @@ The loading component is useful when you want a delay between fetching data and 
 ### Dots
 
 Create an element with the `.loading` class, it is a three-dot loader.  
-Dots loading provide three dots with order for being shown, note that you can change the inital scale of dots value, so instead of zome out we can have zoom in! We will talk about customizing later.
+Dots loading provide three dots with order for being shown, note that you can change the initial scale of dots value, so instead of zoom out you can have zoom in! More about customizing later.
 
 <PreviewBox
   height="110px"
@@ -23,7 +23,7 @@ Dots loading provide three dots with order for being shown, note that you can ch
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Loading</title>
 		<style>
 			html, body{
@@ -54,7 +54,7 @@ To pause the loading use `.pause-animation` also by adding the `.stop-animation`
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Loading</title>
 		<style>
 			html, body{
@@ -83,7 +83,7 @@ Spinners are another kind of loadings, add `.spinner` class to an element to hav
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Loading</title>
 		<style>
 			html, body{
@@ -105,7 +105,7 @@ Spinners are another kind of loadings, add `.spinner` class to an element to hav
 
 ## Overlay loading
 
-This is a situation that happens for any web developer, let's dive in.  
+This is a situation that happens for any web developer, here is how it looks.  
 Imagine you use the loading component inside a button and expect when data is fetching, having a loading inside that button instead of the button text. However, if you use the loading component inside the button directly, the layout undoubtedly will shift. Check the example below to understand this case:
 
 <div className="flex-center dual-example">
@@ -121,7 +121,7 @@ Imagine you use the loading component inside a button and expect when data is fe
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Loading</title>
 	</head>
 	<body>
@@ -159,7 +159,7 @@ Imagine you use the loading component inside a button and expect when data is fe
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Loading</title>
 	</head>
 	<body>
@@ -197,10 +197,10 @@ Imagine you use the loading component inside a button and expect when data is fe
 </button>
 ```
 
-In the first example on click, there is just a loading component inside the button, so button width and height change based on it, which means layout shifts and it is the bad user experience we were talking about.  
+In the first example on click, there is just a loading component inside the button, so button width and height change based on it, which means layout shifts and it is the bad user experience mentioned above.  
 Otherwise second example uses [overlay layer helper class](/docs/helpers/overlay-layer), adds `.overlay-layer` class to the button and appends `<span class="loading"></span>` inside button next to the button text.
 
-:::success How it works
+:::tip How it works
 Technically overlay layer creates an overlay element with CSS `::before` that comes over and hides button content and just shows the loading element, it will prevent unwanted layout shifts and changes will be done smoothly!
 :::
 
@@ -218,7 +218,7 @@ These classes just set a `font-size` property so it is possible to change it you
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Loading</title>
 		<style>
 			.flex-center{
@@ -282,7 +282,7 @@ By default loading component use element or its parent text color, so instead of
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Loading</title>
 		<style>
 			.flex-center{
@@ -342,12 +342,14 @@ By default loading component use element or its parent text color, so instead of
 It is possible to change loading component (both dots and spinner) color, duration and animation.  
 Here is a list of loading component CSS variables to customize it.
 
-`--flatify__loading-color`  
-`--flatify__loading-dot-width`  
-`--flatify__loading-dot-height`  
-`--flatify__loading-dot-animation-start-scale`  
-`--flatify__loading-dot-animation-duration`  
-`--flatify__loading-spinner-animation-duration`
+| Variable | Default |
+| --- | --- |
+| `--flatify__loading-color` | `currentColor` |
+| `--flatify__loading-dot-width` | `0.5em` |
+| `--flatify__loading-dot-height` | `0.5em` |
+| `--flatify__loading-dot-animation-start-scale` | `1.5` |
+| `--flatify__loading-dot-animation-duration` | `1.2s` |
+| `--flatify__loading-spinner-animation-duration` | `0.75s` |
 
 <PreviewBox
   height="180px"
@@ -358,7 +360,7 @@ Here is a list of loading component CSS variables to customize it.
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Loading</title>
 		<style>
 			html, body{

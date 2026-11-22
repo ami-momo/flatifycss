@@ -1,13 +1,13 @@
 ---
 title: Width & height setters
-sidebar_position: 6
+sidebar_position: 10
 ---
 
 import PreviewBox from "../../src/components/preview-box";
 
 These setter classes help you set width and height for elements, they are defined in `_config.scss` file, so you can add more setter classes with custom values.
 
-### Width
+## Width
 
 <PreviewBox
 	height="320px"
@@ -18,7 +18,7 @@ These setter classes help you set width and height for elements, they are define
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Width setters</title>
         <style>
             .my-box{
@@ -67,7 +67,7 @@ These setter classes help you set width and height for elements, they are define
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Height setters</title>
         <style>
             .my-box{
@@ -109,36 +109,28 @@ These setter classes help you set width and height for elements, they are define
 }
 ```
 
-Width predefined classes:  
-`width-0p`  
-`width-10p`  
-`width-15p`  
-`width-25p`  
-`width-30p`  
-`width-50p`  
-`width-60p`  
-`width-75p`  
-`width-90p`  
-`width-95p`  
-`width-100p`
+Here are the predefined classes:
 
-Height predefined classes:  
-`height-0p`  
-`height-10p`  
-`height-15p`  
-`height-25p`  
-`height-30p`  
-`height-50p`  
-`height-60p`  
-`height-75p`  
-`height-90p`  
-`height-95p`  
-`height-100p`
+| Width class | Height class | Value |
+| --- | --- | --- |
+| `.width-0p` | `.height-0p` | `0` |
+| `.width-10p` | `.height-10p` | `10%` |
+| `.width-15p` | `.height-15p` | `15%` |
+| `.width-25p` | `.height-25p` | `25%` |
+| `.width-30p` | `.height-30p` | `30%` |
+| `.width-50p` | `.height-50p` | `50%` |
+| `.width-60p` | `.height-60p` | `60%` |
+| `.width-75p` | `.height-75p` | `75%` |
+| `.width-90p` | `.height-90p` | `90%` |
+| `.width-95p` | `.height-95p` | `95%` |
+| `.width-100p` | `.height-100p` | `100%` |
 
 :::info Custom helper classes
-Note that these classes can be customized in `_config.scss` file, there are two variable called `$WIDTH_LIST` and `$HEIGHT_LIST`, all classes are generated from this list.
+Note that these classes can be customized in `_config.scss` file, there are two variables called `$WIDTH_LIST` and `$HEIGHT_LIST`, all classes are generated from these lists.
 So it is possible to create customized helper classes for width and height simply!
 :::
+
+In the example below `50-pixels` and `5-em` are added to the defaults:
 
 ```scss {15,16,33,34} title="_config.scss"
 // This list will be converted to helper classes.

@@ -9,7 +9,7 @@ export const features = [
   },
   {
     title: "Concise but powerful",
-    desc: "With only ~15 kb size, you can start a new project having just must-haves like components, helper classes, and so on.",
+    desc: "About 19 kB of CSS and 4 kB of JavaScript after gzip, and you can start a new project having just must-haves like components, helper classes, and so on.",
     className: "feature-2",
     svg: svg.artist,
   },

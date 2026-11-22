@@ -1,0 +1,26 @@
+---
+title: Text alignment
+sidebar_position: 12
+---
+
+A few helper classes to align text, they work on any element with text inside:
+
+| Class | CSS |
+| --- | --- |
+| `.text-center` | `text-align: center` |
+| `.text-left` | `text-align: left` |
+| `.text-right` | `text-align: right` |
+| `.text-filled` | `text-align: justify` with `hyphens: auto` |
+
+```html title="index.html"
+<h2 class="text-center">Centered title</h2>
+<p class="text-filled" lang="en">A long paragraph that fills the whole line...</p>
+```
+
+`.text-filled` turns on hyphens so justified text does not get big holes between words. Hyphens depend on the language, so set the `lang` attribute on the page or the element.
+
+:::info Right to left pages
+`.text-left` and `.text-right` use physical directions, they do not flip on right to left pages. Most of the time you do not need them at all, because text already starts from the correct side based on `dir`.
+:::
+
+To change text size, use [size setter classes](/docs/helpers/size-setters), `.text-lg` and `.size-lg` do the same thing.

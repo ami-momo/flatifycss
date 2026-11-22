@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code&family=Nunito:wght@400;600;700&display=swap");
-@import url("https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css");
+@import url("https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css");
 
 /**
  * Any CSS included here will be global. The classic template
@@ -121,7 +121,7 @@ div[class*="codeBlockTitle_"],
 }
 
 .navbar__item.navbar__link.navbar__link--active {
-  color: var(--flatify__accent-color);
+  color: var(--flatify__color-accent-primary);
   font-weight: bold;
 }
 
@@ -461,4 +461,14 @@ div[class*="toggleTrack_"],
   .blog-list-page article[itemprop="blogPost"] header div[class*="blogPostData"] {
     order: 7;
   }
+}
+
+
+.theme-code-block{
+    background: transparent !important
+}
+
+.markdown table *{
+    border-width: 2px;
+    border-color: var(--flatify__bg-color-darker)
 }

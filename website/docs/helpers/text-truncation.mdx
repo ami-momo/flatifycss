@@ -1,6 +1,6 @@
 ---
 title: Text truncation
-sidebar_position: 8
+sidebar_position: 13
 ---
 
 import PreviewBox from "../../src/components/preview-box";
@@ -18,7 +18,7 @@ With text truncation helper class you can limit multiple line to one with three 
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Text truncation</title>
 	</head>
 	<body>
@@ -57,9 +57,9 @@ You can make toggle truncation disabled by default, by adding `.show-text` to `.
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Text truncation</title>
-		 <script src="https://raw.githack.com/amir2mi/flatifycss/master/dist/js/flatify-min.js"></script>
+		 <script src="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/js/flatify-min.js"></script>
 	</head>
 	<body>
 		<p class="truncate toggle-truncate show-text">
@@ -90,4 +90,12 @@ You can make toggle truncation disabled by default, by adding `.show-text` to `.
 </p>
 
 <button class="button toggle-truncate" data-truncation-target=".my-truncated-text">Toggle truncate</button>
+```
+
+## Extra space
+
+Truncated text has `overflow: hidden`, so the bottom of letters like "g" and "y" can get cut with some fonts. Add the `.add-space` class to give it a little padding on top and bottom:
+
+```html title="index.html"
+<p class="truncate add-space">A very long text that will be cut...</p>
 ```

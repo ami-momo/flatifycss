@@ -1,8 +1,8 @@
 /*!
  * FlatifyCSS version 2.0.0
- * Modern flat design framework for the web — inspired by Duolingo design system.
- * Copyright 2021-2024 The FlatifyCSS Authors
- * Licensed under MIT (https://github.com/amir2mi/flatifycss/blob/master/LICENSE)
+ * Modern flat design framework for the web, inspired by Duolingo design system.
+ * Copyright 2021-2026 The FlatifyCSS Authors
+ * Licensed under MIT (https://github.com/ami-momo/flatifycss/blob/master/LICENSE)
  */
 
 // Components

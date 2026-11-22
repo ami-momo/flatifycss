@@ -1,36 +1,50 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require("prism-react-renderer/themes/github");
-const darkCodeTheme = require("prism-react-renderer/themes/palenight");
+const { themes: prismThemes } = require("prism-react-renderer");
+const { version } = require("../package.json");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "FlatifyCSS",
   tagline: "Modern Flat Design Framework",
-  onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
-  url: "https://flatifycss.com",
+  url: "https://flatifycss.amimomo.me",
   baseUrl: "/",
-  // organizationName: "amir2mi", // Usually your GitHub org/user name.
-  // projectName: "flatifycss", // Usually your repo name.
+  organizationName: "ami-momo",
+  projectName: "flatifycss",
   trailingSlash: false,
+  onBrokenLinks: "throw",
+  onBrokenAnchors: "warn",
+
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: "throw",
+    },
+  },
+
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en"],
+  },
+
+  customFields: {
+    version,
+  },
 
   presets: [
     [
-      "@docusaurus/preset-classic",
+      "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
-          editUrl: "https://github.com/amir2mi/flatifycss/tree/master/website",
+          editUrl: "https://github.com/ami-momo/flatifycss/tree/master/website",
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          editUrl: "https://github.com/amir2mi/flatifycss/tree/master/website/blog",
+          editUrl: "https://github.com/ami-momo/flatifycss/tree/master/website",
+          onUntruncatedBlogPosts: "ignore",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -39,9 +53,22 @@ const config = {
     ],
   ],
 
+  themes: [
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+      ({
+        hashed: true,
+        indexBlog: true,
+        highlightSearchTermsOnTargetPage: false,
+      }),
+    ],
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      image: "img/logo.png",
       navbar: {
         title: "FlatifyCSS",
         logo: {
@@ -57,38 +84,24 @@ const config = {
           },
           { to: "/blog", label: "News", position: "left" },
           {
-            href: "https://github.com/amir2mi/flatifycss",
+            href: "https://react-flatifycss.amimomo.me",
+            label: "React",
+            position: "left",
+          },
+          {
+            href: "https://github.com/ami-momo/flatifycss",
             label: "Contribute",
             position: "left",
           },
         ],
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
-      },
-      algolia: {
-        // If Algolia did not provide you any appId, use 'BH4D9OD16A'
-        appId: "KVX24QMELQ",
-
-        // Public API key: it is safe to commit it
-        apiKey: "a38b9f9487cdede5e1cf7097a5b4e5a3",
-
-        indexName: "flatifycss",
-
-        // Optional: see doc section below
-        contextualSearch: true,
-
-        // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
-        externalUrlRegex: "external\\.com|domain\\.com",
-
-        // Optional: Algolia search parameters
-        searchParameters: {},
-
-        //... other Algolia params
+        theme: prismThemes.github,
+        darkTheme: prismThemes.palenight,
+        additionalLanguages: ["scss"],
       },
       footer: {
-		copyright: `Created with ❤️ by FlatifyCSS's team and its contributors.`,
+        copyright: `Made with ❤️ by Amir M. Mohamadi and contributors.`,
       },
     }),
 };

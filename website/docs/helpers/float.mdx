@@ -1,0 +1,23 @@
+---
+title: Float
+sidebar_position: 5
+---
+
+Floats are old but still the easiest way to let text wrap around an image. FlatifyCSS has three tiny helper classes for them:
+
+| Class | CSS |
+| --- | --- |
+| `.float-left` | `float: left` |
+| `.float-right` | `float: right` |
+| `.float-none` | `float: none` |
+
+```html title="index.html"
+<img class="float-left" src="cat.jpg" alt="A sleepy cat" width="150" />
+<p>The cat sleeps on the left, the text goes around it...</p>
+```
+
+:::info Right to left pages
+These classes use physical `left` and `right`, so they do not flip on right to left pages. If you need that, use `float: inline-start` or `float: inline-end` in your own CSS, read more on the [right to left page](/docs/overview/rtl).
+:::
+
+For layout, like placing items side by side, [flex helper classes](/docs/helpers/alignment#flex) are a better choice.

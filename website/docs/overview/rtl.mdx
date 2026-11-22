@@ -3,7 +3,7 @@ title: Right to left
 sidebar_position: 8
 ---
 
-FlatifyCSS supports the right to left layout, it is done by using `inline` featuers of CSS therefore elements are automatically positioned based on the document `direction`.
+FlatifyCSS supports the right to left layout, it is done by using `inline` features of CSS therefore elements are automatically positioned based on the document `direction`.
 
 Note that you need to set `dir="rtl"` attribute for `<html>` tag and `.rtl` class as well.
 
@@ -37,3 +37,7 @@ This is one example of the usage:
 ```
 
 For backward compatibility also the `.ltr` and `.rtl` classes are added.
+
+## Upgrading from version 1
+
+In version 1 there were separate `flatify-rtl.css` files. Since version 2 the same `flatify.css` works for both directions, just set `dir="rtl"` on the `<html>` tag. The old `flatify-rtl*.css` files are still in `/dist` as copies of the main files so your links keep working, but they will be removed in version 3, so switch to `flatify.css` when you can.

@@ -1,14 +1,19 @@
 ---
 title: Containers
+sidebar_position: 6
 ---
 
-To have a clean layout using containers to limit the width will be a practical example, there are some predefined container classes that you can use:   
+To have a clean layout using containers to limit the width will be a practical example, there are some predefined container classes that you can use:
 
-`.container-sm`   
-`.container-md`   
-`.container-lg`   
-`.container-xl`   
-`.container-xxl`   
+| Class | `max-width` |
+| --- | --- |
+| `.container-sm` | `576px` |
+| `.container-md` | `768px` |
+| `.container-lg` | `992px` |
+| `.container-xl` | `1200px` |
+| `.container-xxl` | `1400px` |
+
+Every container also gets `0.64em` padding on the left and right, and is centered with auto margins. If you do not want them centered, set `$CENTERED_CONTAINERS: false` in your Sass config.
 
 These classes are generated based on the `$RESPONSIVE_BREAKPOINTS` variable inside the `_config.scss` file:
 

@@ -10,8 +10,8 @@ Accordions are vertically collapsible components that contain content inside, th
 
 To create an accordion check the below example out, you need to create an exact structure that can be customized easily.
 
-:::success Toggle plus icon
-We use the [add button component](/docs/components/buttons/add-button) to have an interactive plus icon, which changes when the accordion item is opened.
+:::tip Toggle plus icon
+The accordion uses the [add button component](/docs/components/buttons/add-button) to have an interactive plus icon, which changes when the accordion item is opened.
 :::
 
 <PreviewBox
@@ -23,7 +23,7 @@ We use the [add button component](/docs/components/buttons/add-button) to have a
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Accordion</title>
 		<style>
 			.accordion{
@@ -31,7 +31,7 @@ We use the [add button component](/docs/components/buttons/add-button) to have a
 				margin: 0 auto;
 			}
 		</style>
-        <script src="https://raw.githack.com/amir2mi/flatifycss/master/dist/js/flatify-min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/js/flatify-min.js"></script>
     </head>
     <body class="flex-column-center">
 		<div class="accordion">
@@ -70,12 +70,12 @@ We use the [add button component](/docs/components/buttons/add-button) to have a
 			</div>
 			<div class="accordion-item">
 				<h2 class="accordion-header">
-				<button class="accordion-toggle" aria-expanded="false" aria-controls="accordion-2">
+				<button class="accordion-toggle" aria-expanded="false" aria-controls="accordion-3">
 					The Sorrows of Young Werther
 					<span class="add-button"></span>
 				</button>
 				</h2>
-				<div id="accordion-2" class="accordion-collapse">
+				<div id="accordion-3" class="accordion-collapse">
 				<div class="accordion-body">
 					<h3 class="size-lg">Book I</h3>
 					A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I
@@ -129,12 +129,12 @@ Furthermore `aria-controls="ACCORDION-COLLAPSE-ID"` is required to set the id of
   <!-- Third accordion item -->
   <div class="accordion-item">
     <h2 class="accordion-header">
-      <button class="accordion-toggle" aria-expanded="false" aria-controls="accordion-2">
+      <button class="accordion-toggle" aria-expanded="false" aria-controls="accordion-3">
         The Sorrows of Young Werther
         <span class="add-button"></span>
       </button>
     </h2>
-    <div id="accordion-2" class="accordion-collapse">
+    <div id="accordion-3" class="accordion-collapse">
       <div class="accordion-body">
         <h3 class="size-lg">Book I</h3>
         A wonderful serenity has taken possession of my entire soul...
@@ -157,7 +157,7 @@ The default accordion does not have borders and it can be flexible to be customi
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Accordion</title>
 		<style>
 			.accordion{
@@ -165,7 +165,7 @@ The default accordion does not have borders and it can be flexible to be customi
 				margin: 0 auto;
 			}
 		</style>
-        <script src="https://raw.githack.com/amir2mi/flatifycss/master/dist/js/flatify-min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/js/flatify-min.js"></script>
     </head>
     <body class="flex-column-center">
 		<div class="accordion bordered">
@@ -205,12 +205,12 @@ The default accordion does not have borders and it can be flexible to be customi
 			</div>
 			<div class="accordion-item">
 				<h2 class="accordion-header">
-				<button class="accordion-toggle" aria-expanded="false" aria-controls="accordion-2">
+				<button class="accordion-toggle" aria-expanded="false" aria-controls="accordion-3">
 					The Sorrows of Young Werther
 					<span class="add-button"></span>
 				</button>
 				</h2>
-				<div id="accordion-2" class="accordion-collapse">
+				<div id="accordion-3" class="accordion-collapse">
 				<div class="accordion-body">
 					<h3 class="size-lg">Book I</h3>
 					A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I
@@ -232,7 +232,7 @@ The default accordion does not have borders and it can be flexible to be customi
 
 ## Expendable
 
-As we call it "accordion" there must not be more than one item expanded item at a time. However, you can break the limit by adding the `.expendable` class to the `.accordion` element.
+It is called an "accordion", so there must not be more than one expanded item at a time. However, you can break the limit by adding the `.expendable` class to the `.accordion` element.
 
 <PreviewBox
   height="310px"
@@ -243,7 +243,7 @@ As we call it "accordion" there must not be more than one item expanded item at 
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Accordion</title>
 		<style>
 			.accordion{
@@ -251,7 +251,7 @@ As we call it "accordion" there must not be more than one item expanded item at 
 				margin: 0 auto;
 			}
 		</style>
-        <script src="https://raw.githack.com/amir2mi/flatifycss/master/dist/js/flatify-min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/js/flatify-min.js"></script>
     </head>
     <body class="flex-column-center">
 		<div class="accordion bordered expendable">
@@ -291,12 +291,12 @@ As we call it "accordion" there must not be more than one item expanded item at 
 			</div>
 			<div class="accordion-item">
 				<h2 class="accordion-header">
-				<button class="accordion-toggle" aria-expanded="false" aria-controls="accordion-2">
+				<button class="accordion-toggle" aria-expanded="false" aria-controls="accordion-3">
 					The Sorrows of Young Werther
 					<span class="add-button"></span>
 				</button>
 				</h2>
-				<div id="accordion-2" class="accordion-collapse">
+				<div id="accordion-3" class="accordion-collapse">
 				<div class="accordion-body">
 					<h3 class="size-lg">Book I</h3>
 					A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I
@@ -330,7 +330,7 @@ These classes just set a `font-size` property so it is possible to change it you
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Accordion</title>
 		<style>
 			.accordion{
@@ -338,7 +338,7 @@ These classes just set a `font-size` property so it is possible to change it you
 				margin: 1em auto 0;
 			}
 		</style>
-        <script src="https://raw.githack.com/amir2mi/flatifycss/master/dist/js/flatify-min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/js/flatify-min.js"></script>
     </head>
     <body class="flex-column-center">
 		<div class="accordion bordered size-sm">
@@ -378,12 +378,12 @@ These classes just set a `font-size` property so it is possible to change it you
 			</div>
 			<div class="accordion-item">
 				<h2 class="accordion-header">
-				<button class="accordion-toggle" aria-expanded="false" aria-controls="accordion-2">
+				<button class="accordion-toggle" aria-expanded="false" aria-controls="accordion-3">
 					The Sorrows of Young Werther
 					<span class="add-button"></span>
 				</button>
 				</h2>
-				<div id="accordion-2" class="accordion-collapse">
+				<div id="accordion-3" class="accordion-collapse">
 				<div class="accordion-body">
 					<h3 class="size-lg">Book I</h3>
 					A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I
@@ -431,12 +431,12 @@ These classes just set a `font-size` property so it is possible to change it you
 			</div>
 			<div class="accordion-item">
 				<h2 class="accordion-header">
-				<button class="accordion-toggle" aria-expanded="false" aria-controls="accordion-2">
+				<button class="accordion-toggle" aria-expanded="false" aria-controls="accordion-3">
 					The Sorrows of Young Werther
 					<span class="add-button"></span>
 				</button>
 				</h2>
-				<div id="accordion-2" class="accordion-collapse">
+				<div id="accordion-3" class="accordion-collapse">
 				<div class="accordion-body">
 					<h3 class="size-lg">Book I</h3>
 					A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I
@@ -484,12 +484,12 @@ These classes just set a `font-size` property so it is possible to change it you
 			</div>
 			<div class="accordion-item">
 				<h2 class="accordion-header">
-				<button class="accordion-toggle" aria-expanded="false" aria-controls="accordion-2">
+				<button class="accordion-toggle" aria-expanded="false" aria-controls="accordion-3">
 					The Sorrows of Young Werther
 					<span class="add-button"></span>
 				</button>
 				</h2>
-				<div id="accordion-2" class="accordion-collapse">
+				<div id="accordion-3" class="accordion-collapse">
 				<div class="accordion-body">
 					<h3 class="size-lg">Book I</h3>
 					A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I
@@ -513,7 +513,7 @@ These classes just set a `font-size` property so it is possible to change it you
 
 ## Color
 
-There are helper classes for styling elements like accordions, first read about [color setter classes](/docs/helpers/color-setters) for having button with diffrent background and text color. You can add the class to the `.accordion` or style each item individualy by adding it to the `.accordion-item` element.
+There are helper classes for styling elements like accordions, first read about [color setter classes](/docs/helpers/color-setters) for having button with different background and text color. You can add the class to the `.accordion` or style each item individually by adding it to the `.accordion-item` element.
 
 <PreviewBox
   height="400px"
@@ -524,7 +524,7 @@ There are helper classes for styling elements like accordions, first read about 
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Accordion</title>
 		<style>
 			.accordion{
@@ -532,7 +532,7 @@ There are helper classes for styling elements like accordions, first read about 
 				margin: 1em auto 0;
 			}
 		</style>
-        <script src="https://raw.githack.com/amir2mi/flatifycss/master/dist/js/flatify-min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/js/flatify-min.js"></script>
     </head>
     <body class="flex-column-center">
 		<div class="accordion bordered style-dark">
@@ -572,12 +572,12 @@ There are helper classes for styling elements like accordions, first read about 
 			</div>
 			<div class="accordion-item">
 				<h2 class="accordion-header">
-				<button class="accordion-toggle" aria-expanded="false" aria-controls="accordion-2">
+				<button class="accordion-toggle" aria-expanded="false" aria-controls="accordion-3">
 					The Sorrows of Young Werther
 					<span class="add-button"></span>
 				</button>
 				</h2>
-				<div id="accordion-2" class="accordion-collapse">
+				<div id="accordion-3" class="accordion-collapse">
 				<div class="accordion-body">
 					<h3 class="size-lg">Book I</h3>
 					A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I
@@ -625,12 +625,12 @@ There are helper classes for styling elements like accordions, first read about 
 			</div>
 			<div class="accordion-item style-yellow">
 				<h2 class="accordion-header">
-				<button class="accordion-toggle" aria-expanded="false" aria-controls="accordion-2">
+				<button class="accordion-toggle" aria-expanded="false" aria-controls="accordion-3">
 					The Sorrows of Young Werther
 					<span class="add-button"></span>
 				</button>
 				</h2>
-				<div id="accordion-2" class="accordion-collapse">
+				<div id="accordion-3" class="accordion-collapse">
 				<div class="accordion-body">
 					<h3 class="size-lg">Book I</h3>
 					A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I
@@ -663,15 +663,21 @@ There are helper classes for styling elements like accordions, first read about 
 There are two types of animation for each accordion item: show and hide.  
 The show animation is triggered when the item is expanded and the hide animation is triggered when the item is going to be collapsed. The default animation is blow in/out, also by adding the `.fade-animation` class to the `.accordion` element, you can simplify it to fade in/out.
 
-Here are the CSS variables that you can change the duration with:  
-`--flatify__accordion-animation-show-duration`  
-`--flatify__accordion-animation-hide-duration`
+Here are the CSS variables that you can change the duration with:
 
-or define a custom animation:  
-`--flatify__accordion-animation-show`  
-`--flatify__accordion-animation-hide`
+| Variable | Default |
+| --- | --- |
+| `--flatify__accordion-animation-show-duration` | `300ms` |
+| `--flatify__accordion-animation-hide-duration` | `200ms` |
 
-The default animation is set to fade in and fade out, [the predefined animations](/docs/helpers/animation) of FlatifyCSS.
+or define a custom animation:
+
+| Variable | Default |
+| --- | --- |
+| `--flatify__accordion-animation-show` | `flatify-blow-in var(--flatify__accordion-animation-show-duration) 0.1s ease-in-out` |
+| `--flatify__accordion-animation-hide` | `flatify-blow-out var(--flatify__accordion-animation-hide-duration) ease-in-out` |
+
+The default animation is set to blow in and blow out, [the predefined animations](/docs/helpers/animation) of FlatifyCSS.
 
 Here is an example of changing the animations:
 
@@ -684,7 +690,7 @@ Here is an example of changing the animations:
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Accordion</title>
 		<style>
 			.accordion{
@@ -696,7 +702,7 @@ Here is an example of changing the animations:
 				--flatify__accordion-animation-hide: flatify-blow-out 0.5s;
 			}
 		</style>
-        <script src="https://raw.githack.com/amir2mi/flatifycss/master/dist/js/flatify-min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/js/flatify-min.js"></script>
     </head>
     <body class="flex-column-center">
 		<div class="accordion bordered my-custom-animation">
@@ -736,12 +742,12 @@ Here is an example of changing the animations:
 			</div>
 			<div class="accordion-item">
 				<h2 class="accordion-header">
-				<button class="accordion-toggle" aria-expanded="false" aria-controls="accordion-2">
+				<button class="accordion-toggle" aria-expanded="false" aria-controls="accordion-3">
 					The Sorrows of Young Werther
 					<span class="add-button"></span>
 				</button>
 				</h2>
-				<div id="accordion-2" class="accordion-collapse">
+				<div id="accordion-3" class="accordion-collapse">
 				<div class="accordion-body">
 					<h3 class="size-lg">Book I</h3>
 					A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I
@@ -785,9 +791,11 @@ The example could be:
 
 More than customizing animations there are CSS variables to change the base colors of accordions:
 
-`--flatify__accordion-txt-color`  
-`--flatify__accordion-bg-color`  
-`--flatify__accordion-border-color`
+| Variable | Default |
+| --- | --- |
+| `--flatify__accordion-txt-color` | `var(--flatify__txt-color)` |
+| `--flatify__accordion-bg-color` | `var(--flatify__bg-color)` |
+| `--flatify__accordion-border-color` | `var(--flatify__bg-color-darker)` |
 
 <PreviewBox
   height="250px"
@@ -798,7 +806,7 @@ More than customizing animations there are CSS variables to change the base colo
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Accordion</title>
 		<style>
 			.accordion{
@@ -811,7 +819,7 @@ More than customizing animations there are CSS variables to change the base colo
 				--flatify__accordion-border-color: #F6BB42;
 			}
 		</style>
-        <script src="https://raw.githack.com/amir2mi/flatifycss/master/dist/js/flatify-min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/js/flatify-min.js"></script>
     </head>
     <body class="flex-column-center">
 		<div class="accordion bordered custom-accordion">
@@ -851,12 +859,12 @@ More than customizing animations there are CSS variables to change the base colo
 			</div>
 			<div class="accordion-item">
 				<h2 class="accordion-header">
-				<button class="accordion-toggle" aria-expanded="false" aria-controls="accordion-2">
+				<button class="accordion-toggle" aria-expanded="false" aria-controls="accordion-3">
 					The Sorrows of Young Werther
 					<span class="add-button"></span>
 				</button>
 				</h2>
-				<div id="accordion-2" class="accordion-collapse">
+				<div id="accordion-3" class="accordion-collapse">
 				<div class="accordion-body">
 					<h3 class="size-lg">Book I</h3>
 					A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I

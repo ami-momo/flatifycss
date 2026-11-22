@@ -1,6 +1,6 @@
 ---
 title: Alignment & positioning
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 import PreviewBox from "../../src/components/preview-box";
@@ -24,9 +24,11 @@ without flex parent do nothing.
 
 ### Children in a row
 
-`.flex-center` [row] Alignment for both X and Y axes.  
-`.flex-center-x` [row] Alignment for X axis.  
-`.flex-center-y` [row] Alignment for Y axis.
+| Class | Direction | Centers on |
+| --- | --- | --- |
+| `.flex-center` | row | X and Y axes |
+| `.flex-center-x` | row | X axis |
+| `.flex-center-y` | row | Y axis |
 
 <PreviewBox
   height="265px"
@@ -36,7 +38,7 @@ without flex parent do nothing.
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Flex alignment classes</title>
         <style>
             .box{
@@ -103,9 +105,11 @@ without flex parent do nothing.
 
 ### Children in a column
 
-`.flex-column-center` [column] Alignment for both X and Y axes.  
-`.flex-column-center-x` [column] Alignment for X axis.  
-`.flex-column-center-y` [column] Alignment for Y axis.
+| Class | Direction | Centers on |
+| --- | --- | --- |
+| `.flex-column-center` | column | X and Y axes |
+| `.flex-column-center-x` | column | X axis |
+| `.flex-column-center-y` | column | Y axis |
 
 <PreviewBox
   height="265px"
@@ -115,7 +119,7 @@ without flex parent do nothing.
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Flex alignment classes</title>
         <style>
             .box{
@@ -181,19 +185,15 @@ without flex parent do nothing.
 
 ## Margin
 
-`.margin-auto`
-
-<br />
-
-`.margin-ya` Margin top & bottom is auto.  
-`.margin-ta` Margin top auto.  
-`.margin-ba` Margin bottom auto.
-
-<br />
-
-`.margin-xa` or `.push-center` Margin left & right is auto.  
-`.margin-la` or `.push-right` Margin lefy is auto.  
-`.margin-ra` or `.push-left` Margin right is auto.
+| Class | Alias | CSS |
+| --- | --- | --- |
+| `.margin-auto` | | `margin: auto` |
+| `.margin-ya` | | `margin-top: auto; margin-bottom: auto` |
+| `.margin-ta` | | `margin-top: auto` |
+| `.margin-ba` | | `margin-bottom: auto` |
+| `.margin-xa` | `.push-center` | `margin-left: auto; margin-right: auto` |
+| `.margin-la` | `.push-right` | `margin-left: auto` |
+| `.margin-ra` | `.push-left` | `margin-right: auto` |
 
 With margin you can center an element one horizontal line.
 
@@ -205,7 +205,7 @@ With margin you can center an element one horizontal line.
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Margin alignment classes</title>
         <style>
             .box{
@@ -265,21 +265,17 @@ so in this case `left: 50%` or something like **is not a wise choice**,
 `top` and `bottom` or `left` and `right` to `0` and set `margin: auto`.
 The list position helper classes are:
 
-`.position-relative` To have relative postion (mostly for wrapper).  
-`.position-absolute` To have absolute postion (mostly for children).
-
-<br />
-
-`.place-expand` It sets all sides to 0  
-`.place-expand-y` It sets `top` and `bottom` to 0  
-`.place-expand-x` It sets `left` and `right` to 0
-
-<br />
-
-`.place-top` It sets top to 0  
-`.place-bottom` It sets bottom to 0  
-`.place-left` It sets left to 0  
-`.place-right` It sets right to 0
+| Class | What it does |
+| --- | --- |
+| `.position-relative` | Relative position (mostly for wrapper) |
+| `.position-absolute` | Absolute position (mostly for children) |
+| `.place-expand` | Sets all sides to 0 |
+| `.place-expand-y` | Sets `top` and `bottom` to 0 |
+| `.place-expand-x` | Sets `left` and `right` to 0 |
+| `.place-top` | Sets `top` to 0 |
+| `.place-bottom` | Sets `bottom` to 0 |
+| `.place-left` | Sets `left` to 0 |
+| `.place-right` | Sets `right` to 0 |
 
 Let see what is the better way:
 
@@ -291,7 +287,7 @@ Let see what is the better way:
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Position alignment classes</title>
         <style>
             .box{
@@ -349,12 +345,11 @@ Let see what is the better way:
 
 Sticky and fixed positions have their helper classes. The main use case for these classes is related to nav bar component.
 
-`.sticky-top`  
-`.sticky-bottom`  
-`.sticky-left`  
-`.sticky-right`
+| Sticky | Fixed | Sticks to |
+| --- | --- | --- |
+| `.sticky-top` | `.fixed-top` | Top |
+| `.sticky-bottom` | `.fixed-bottom` | Bottom |
+| `.sticky-left` | `.fixed-left` | Left |
+| `.sticky-right` | `.fixed-right` | Right |
 
-`.fixed-top`  
-`.fixed-bottom`  
-`.fixed-left`  
-`.fixed-right`
+Sticky classes also get `z-index: 1010` (`$ZINDEX_STICKY`) and fixed ones `z-index: 1020` (`$ZINDEX_FIXED`), so they stay above the page content.

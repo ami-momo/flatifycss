@@ -8,23 +8,15 @@ export default function HomepageContribute() {
     <div className="homepage-contribute">
       <div className="contribute-texts flex-column-center">
         <h2 className="homepage-h2 text-center">Keep it breathing</h2>
-        <p className="homepage-para size-2x text-center">We need your help to make it better than what it is!</p>
+        <p className="homepage-para size-2x text-center">It is a one person project, so every issue, idea and pull request really helps.</p>
         <div className="flex-center">
           <a
-            href="https://github.com/amir2mi/flatifycss"
+            href="https://github.com/ami-momo/flatifycss"
             target="_blank"
             className={`button two-layer-button size-2x featured-button contribute-button style-light`}
           >
             Contribute
             <span className="secondary-text">{svg.github}</span>
-          </a>
-          <a
-            href="https://www.buymeacoffee.com/amir2mi"
-            target="_blank"
-            className="button two-layer-button size-2x style-accent featured-button donate-button"
-          >
-            Buy a coffee
-            <span className="secondary-text">{svg.coffee}</span>
           </a>
         </div>
       </div>

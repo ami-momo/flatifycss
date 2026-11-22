@@ -4,11 +4,11 @@ title: Progress
 
 import PreviewBox from "../../src/components/preview-box";
 
-Show the state of something with the progress component of FlatifyCSS, it has its custom HTML, this is not a `<progress>` because customizing it is kind of a mess so we create our custom progress.
+Show the state of something with the progress component of FlatifyCSS, it has its custom HTML, this is not a `<progress>` because customizing it is kind of a mess so I made a custom progress.
 
 ## Simple progress examples
 
-To have a progress component we must have two elements: `.progress` and inside it a `.progress-bar` element.  
+A progress component needs two elements: `.progress` and inside it a `.progress-bar` element.  
 Note that the progress bar should be styled by its share for example if 25% of the job is done you should set `width: 25%` or use [width setter helper classes](/docs/helpers/width-and-height-setters).
 
 <PreviewBox
@@ -20,7 +20,7 @@ Note that the progress bar should be styled by its share for example if 25% of t
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Progress</title>
 	</head>
 	<body>
@@ -105,8 +105,8 @@ Note that the progress bar should be styled by its share for example if 25% of t
 '
 />
 
-:::success Accessibility matters!
-We have a custom progress component with the custom HTML structure, by default they are just some `<div>`s, so they do not make sense for accessibility.
+:::tip Accessibility matters!
+It is a custom progress component with a custom HTML structure, by default they are just some `<div>`s, so they do not make sense for accessibility.
 
 A comprehensive progress bar must have these attributes:  
 `role="progressbar"` for progress bar element to define it is the progress bar.  
@@ -143,7 +143,7 @@ There is a class called `.processing` for adding the effect that the work is in 
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Progress</title>
 	</head>
 	<body>
@@ -178,7 +178,7 @@ By default progress does not have a border, but you can have it by adding the `.
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Progress</title>
 	</head>
 	<body>
@@ -214,7 +214,7 @@ These classes just set a `font-size` property so it is possible to change it you
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Progress</title>
 	</head>
 	<body>
@@ -251,7 +251,7 @@ There are helper classes for styling elements like progress, first read about [c
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Progress</title>
 	</head>
 	<body>
@@ -288,15 +288,19 @@ There are helper classes for styling elements like progress, first read about [c
 
 Each progress has these CSS variables for customization, they can be set as `:root` for all progress components default style or just for a specific selector.
 
-`--flatify__progress-bg-color`  
-`--flatify__progress-txt-color`  
-`--flatify__progress-border-color`  
-`--flatify__progress-animation-duration`
+| Variable | Default |
+| --- | --- |
+| `--flatify__progress-bg-color` | `var(--flatify__bg-color-dark)` |
+| `--flatify__progress-txt-color` | `var(--flatify__txt-color-inverted)` |
+| `--flatify__progress-border-color` | `var(--flatify__bg-color-darker)` |
+| `--flatify__progress-animation-duration` | `2.5s` |
 
 The progress bar uses accent color as the background color which can be customized with:
 
-`--flatify__color-accent-primary` for progress bar background color.  
-`--flatify__color-accent-light` for progress bar processing state element background color.
+| Variable | Default | Notes |
+| --- | --- | --- |
+| `--flatify__color-accent-primary` | `#1cb0f6` | Progress bar background color |
+| `--flatify__color-accent-light` | `#77d0fa` | Background of the processing state element |
 
 <PreviewBox
   height="140px"
@@ -307,7 +311,7 @@ The progress bar uses accent color as the background color which can be customiz
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Progress</title>
 		<style>
 			.my-custom-progress-bar{

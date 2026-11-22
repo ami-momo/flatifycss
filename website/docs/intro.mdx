@@ -8,42 +8,39 @@ import HomepageFeatures from "../src/components/homepage/features";
 import { features_horizontal } from "../src/data/features-list";
 
 <p className="size-lg weight-medium">
-  FlatifyCSS is the web modern and minimalist flat design library inspired by the
-  <a href="https://design.duolingo.com/" rel="nofollow" target="_blank">
-    &nbsp; Duolingo design system
-  </a>. It respects accessibility and comes with the web's most common components.
+  FlatifyCSS is the web modern and minimalist flat design library inspired by the <a href="https://design.duolingo.com/" rel="nofollow" target="_blank">Duolingo design system</a>. It respects accessibility and comes with the web's most common components.
 </p>
 
 ## Getting started
 
-When we talk about flat design, you might think about the creepy palette and some old-fashioned web trends, but no, flat design is a wide term and in this case for FlatifyCSS, there are some principles that shape it clearly you will understand it easily.
+When you hear about flat design, you might think about the creepy palette and some old-fashioned web trends, but no, flat design is a wide term and in this case for FlatifyCSS, there are some principles that shape it clearly, and you will get them easily.
 
 <HomepageFeatures items={features_horizontal} isSmall={true} />
 
 ## Download
 
-FlatifyCSS is available for users in many ways, you can install it using package managers, directly from CDN, or even downloading [lastest project archive](https://github.com/amir2mi/flatifycss/archive/master.zip).
+FlatifyCSS is available for users in many ways, you can install it using package managers, directly from CDN, or even downloading [latest project archive](https://github.com/ami-momo/flatifycss/archive/master.zip).
 
 ### CDN
 
-Here is [jsDelivr](https://www.jsdelivr.com/), you can add FlatifyCSS just with a single line of code:
+Here is [jsDelivr](https://www.jsdelivr.com/), you can add FlatifyCSS just with a single line of code. The `@2` in the URL keeps you on the latest 2.x release, so you get fixes but never a breaking change:
 
 ```html title="index.html"
 <!-- CSS -->
 <link
-  href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css"
+  href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css"
   rel="stylesheet"
   crossorigin="anonymous"
 />
 
 <!-- JavaScript : Popperjs + FlatifyCSS -->
 <script src="https://unpkg.com/@popperjs/core@2" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/flatifycss/dist/js/flatify.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/js/flatify-min.js" crossorigin="anonymous"></script>
 ```
 
 ### Package managers
 
-You can include FlatifyCSS in your project with npm, yarn or composer:
+You can include FlatifyCSS in your project with npm, Yarn, Bun or Composer:
 
 #### npm
 
@@ -55,6 +52,12 @@ npm install flatifycss
 
 ```bash title="command line"
 yarn add flatifycss
+```
+
+#### Bun
+
+```bash title="command line"
+bun add flatifycss
 ```
 
 #### Composer
@@ -76,9 +79,17 @@ CSS files come with some options, files with `-noprefix` suffix, do not have [Po
 `flatify-noprefix.css`  
 `flatify-noprefix-min.css`
 
+Since version 2, the same file works for both left to right and right to left pages, read more on the [right to left page](/docs/overview/rtl).
+
 ### JS
 
 Note that FlatifyCSS needs [Popperjs](https://popper.js.org/) for dropdowns and popovers, but this library is not included inside the JavaScript file of FlatifyCSS, so it is up to you to include it inside your webpage.
 
 `flatify.js`  
 `flatify-min.js`
+
+The JavaScript part is optional, you only need it for interactive components like accordions, dropdowns, modals and tabs. The [JavaScript page](/docs/overview/javascript) lists everything it does.
+
+### Sass
+
+Want to change colors, fonts or sizes at the source? The `/scss` folder is shipped too, import `scss/flatify.scss` in your own Sass file and override the variables you like. The [customization page](/docs/overview/customization) shows how.

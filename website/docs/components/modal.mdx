@@ -4,11 +4,11 @@ title: Modals
 
 import PreviewBox from "../../src/components/preview-box";
 
-Modal, pop-up box, bottom sheet, off-canvas, anything can be related to this component, we generally call it **modal**. There are different types of modals with different sizes and styles that come with FlatifyCSS, which we will cover with practical examples on this page.
+Modal, pop-up box, bottom sheet, off-canvas, anything can be related to this component, I call it **modal**. There are different types of modals with different sizes and styles that come with FlatifyCSS, which this page covers with practical examples.
 
 ## A simple modal
 
-To have a simple modal you need to load FlatifyCSS, JavaScript file into your page. There must an element to call the modal and open it. Here is an example:
+To have a simple modal you need to load FlatifyCSS, JavaScript file into your page. There must be an element to call the modal and open it. Here is an example:
 
 <PreviewBox
   height="250px"
@@ -19,9 +19,9 @@ To have a simple modal you need to load FlatifyCSS, JavaScript file into your pa
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Modals</title>
-        <script src="https://raw.githack.com/amir2mi/flatifycss/master/dist/js/flatify-min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/js/flatify-min.js"></script>
     </head>
     <body class="flex-column-center">
 		<button class="button open-modal" data-modal-target=".my-modal">Display The Modal</button>
@@ -59,7 +59,7 @@ To have a simple modal you need to load FlatifyCSS, JavaScript file into your pa
 
 ### Open modal button
 
-The button that opens modal on click, must have two things to work: first `.open-modal` class and `data-modal-target` HTML attribute which should select modal by its special address it can be a class or an ID (in this case `.my-modal` is the custom class we will set to our modal).
+The button that opens modal on click, must have two things to work: first `.open-modal` class and `data-modal-target` HTML attribute which should select modal by its special address it can be a class or an ID (in this case `.my-modal` is the custom class of the modal).
 
 ```html
 <button class="button open-modal" data-modal-target=".my-modal">Display The Modal</button>
@@ -67,7 +67,7 @@ The button that opens modal on click, must have two things to work: first `.open
 
 ### Connection between modal and button
 
-As said above we have a custom class called `.my-modal`, we should add it to the `.modal` element, now they are connected it means by clicking the open button modal will be shown.
+As said above there is a custom class called `.my-modal`, add it to the `.modal` element, now they are connected it means by clicking the open button modal will be shown.
 
 ```html
 <div class="modal my-modal" tabindex="-1" aria-labelledby="my-modal-title">...</div>
@@ -132,7 +132,7 @@ The final modal will be like this:
 
 ## Required action
 
-By default if users click outside of the modal, aka "backdrop", the modal will be closed, however, if you add `.required` class to the `.modal` element it will not treat this way anymore, in other words, the modal will be closed only when user click related `.close-button`.
+By default if users click outside of the modal, aka "backdrop", the modal will be closed, however, if you add `.required` class to the `.modal` element it will not treat this way anymore, in other words, the modal will be closed only when user click related `.close-modal` button.
 
 <PreviewBox
   height="250px"
@@ -143,9 +143,9 @@ By default if users click outside of the modal, aka "backdrop", the modal will b
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Modals</title>
-        <script src="https://raw.githack.com/amir2mi/flatifycss/master/dist/js/flatify-min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/js/flatify-min.js"></script>
     </head>
     <body class="flex-column-center">
 		<button class="button open-modal" data-modal-target=".my-modal">Display The Modal</button>
@@ -187,14 +187,16 @@ By default if users click outside of the modal, aka "backdrop", the modal will b
 
 ## Positions
 
-A modal can be centered or stick to top, bottom, right or left. While it is stuck at sides, its animation will be diffrent as well.
+A modal can be centered or stick to top, bottom, right or left. While it is stuck at sides, its animation will be different as well.
 These are classes that can be added to the `.modal` element, easy-peasy.
 
-`modal-center`  
-`modal-top`  
-`modal-botton`  
-`modal-left`  
-`modal-right`
+| Class | Position | Show animation |
+| --- | --- | --- |
+| `.modal-center` | Center of the screen | Blow in |
+| `.modal-top` | Stuck to the top | Slide down |
+| `.modal-bottom` | Stuck to the bottom | Slide up |
+| `.modal-left` | Stuck to the left side | Slide in from the left |
+| `.modal-right` | Stuck to the right side | Slide in from the right |
 
 :::info Width & height setters
 You can use [width & height setter helper classes](/docs/helpers/width-and-height-setters), they come in handy when you need to fill the height for the left and right sides.
@@ -209,9 +211,9 @@ You can use [width & height setter helper classes](/docs/helpers/width-and-heigh
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Modals</title>
-        <script src="https://raw.githack.com/amir2mi/flatifycss/master/dist/js/flatify-min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/js/flatify-min.js"></script>
     </head>
     <body class="flex-column-center">
 		<div>
@@ -353,9 +355,9 @@ To have modal with borders add `.bordered` class to the `.modal` element.
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Modals</title>
-        <script src="https://raw.githack.com/amir2mi/flatifycss/master/dist/js/flatify-min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/js/flatify-min.js"></script>
     </head>
     <body class="flex-column-center">
 		<button class="button open-modal" data-modal-target=".my-modal">Display The Modal</button>
@@ -397,7 +399,13 @@ To have modal with borders add `.bordered` class to the `.modal` element.
 
 ## Sizes
 
-To change the button size use [size setter classes](/docs/helpers/size-setters). Modals also support two special classes `.modal-lg` and `.modal-sm`, these classes specially modify max-width besides font size.
+To change the modal size use [size setter classes](/docs/helpers/size-setters). Modals also support two special classes `.modal-lg` and `.modal-sm`, these classes specially modify max-width besides font size.
+
+| Class | `max-width` | `font-size` |
+| --- | --- | --- |
+| `.modal-sm` | `20em` | `0.9em` |
+| (default) | `32em` | inherited |
+| `.modal-lg` | `45em` | `1.2em` |
 
 <PreviewBox
   height="250px"
@@ -408,9 +416,9 @@ To change the button size use [size setter classes](/docs/helpers/size-setters).
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Modals</title>
-        <script src="https://raw.githack.com/amir2mi/flatifycss/master/dist/js/flatify-min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/js/flatify-min.js"></script>
     </head>
     <body class="flex-column-center">
 		<div>
@@ -538,9 +546,9 @@ There are helper classes for styling elements like modal, first read about [colo
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Modals</title>
-        <script src="https://raw.githack.com/amir2mi/flatifycss/master/dist/js/flatify-min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/js/flatify-min.js"></script>
     </head>
     <body class="flex-column-center">
 		<div>
@@ -673,11 +681,13 @@ There are helper classes for styling elements like modal, first read about [colo
 
 Instead of using color setter classes you can customize it with predefined CSS variables, These are all of them:
 
-`--flatify__modal-bg-color`  
-`--flatify__modal-txt-color`  
-`--flatify__modal-border-color`  
-`--flatify__modal-animation-show-duration`  
-`--flatify__modal-animation-hide-duration`
+| Variable | Default |
+| --- | --- |
+| `--flatify__modal-bg-color` | `var(--flatify__bg-color)` |
+| `--flatify__modal-txt-color` | `var(--flatify__txt-color)` |
+| `--flatify__modal-border-color` | `var(--flatify__bg-color-darker)` |
+| `--flatify__modal-animation-show-duration` | `350ms` |
+| `--flatify__modal-animation-hide-duration` | `250ms` |
 
 <PreviewBox
 	height="250px"
@@ -688,7 +698,7 @@ Instead of using color setter classes you can customize it with predefined CSS v
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Modals</title>
 		<style>
 			body{
@@ -700,7 +710,7 @@ Instead of using color setter classes you can customize it with predefined CSS v
     			--flatify__modal-border-color: #FFCE54;
     		}
     	</style>
-        <script src="https://raw.githack.com/amir2mi/flatifycss/master/dist/js/flatify-min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/js/flatify-min.js"></script>
     </head>
     <body class="flex-column-center">
     	<button class="button open-modal" data-modal-target=".my-modal">Display The Modal</button>

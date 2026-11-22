@@ -20,10 +20,10 @@ export default function HomepageQuickInstall() {
           <p className="homepage-para">No worry about files, jsDelivr takes it over.</p>
           <div className="quick-install-codes">
             <pre>
-              {`<link href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" rel="stylesheet" crossorigin="anonymous"/>`}
+              {`<link href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" rel="stylesheet" crossorigin="anonymous"/>`}
             </pre>
             <pre>
-              {`<script src="https://unpkg.com/@popperjs/core@2" crossorigin="anonymous"></script>\n<script src="https://cdn.jsdelivr.net/npm/flatifycss/dist/js/flatify.min.js" crossorigin="anonymous"></script>`}
+              {`<script src="https://unpkg.com/@popperjs/core@2" crossorigin="anonymous"></script>\n<script src="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/js/flatify-min.js" crossorigin="anonymous"></script>`}
             </pre>
           </div>
         </div>

@@ -23,7 +23,7 @@ All toggles can be checked.
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Toggle switch</title>
 	</head>
 	<body>
@@ -88,7 +88,7 @@ One of them can be checked, note that radios' name attribute should be the same.
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Toggle switch</title>
 		<style>
 			.toggle-wrapper svg{
@@ -154,7 +154,7 @@ These classes just set a `font-size` property so it is possible to change it you
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Toggle switch</title>
 	</head>
 	<body>
@@ -210,16 +210,18 @@ These classes just set a `font-size` property so it is possible to change it you
 
 ## Customization
 
-There are CSS variables for customizing radios:
+There are CSS variables for customizing toggle switches:
 
-`--flatify__form-element-accent-color`  
-`--flatify__form-element-bg-color`  
-`--flatify__form-element-txt-color`  
-`--flatify__form-element-border-color`  
-`--flatify__form-element-border-color__focus`  
-`--flatify__form-element-border-color__valid`  
-`--flatify__form-element-border-color__warning`  
-`--flatify__form-element-border-color__invalid`
+| Variable | Default |
+| --- | --- |
+| `--flatify__form-element-accent-color` | `var(--flatify__color-accent-primary)` |
+| `--flatify__form-element-bg-color` | `var(--flatify__bg-color-dark)` |
+| `--flatify__form-element-txt-color` | `var(--flatify__txt-color)` |
+| `--flatify__form-element-border-color` | `var(--flatify__bg-color-darker)` |
+| `--flatify__form-element-border-color__focus` | `var(--flatify__form-element-accent-color)` |
+| `--flatify__form-element-border-color__valid` | `var(--flatify__color-success-primary)` |
+| `--flatify__form-element-border-color__warning` | `var(--flatify__color-warning-primary)` |
+| `--flatify__form-element-border-color__invalid` | `var(--flatify__color-danger-primary)` |
 
 Here is an example of these variables usage:
 
@@ -231,7 +233,7 @@ Here is an example of these variables usage:
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Inputs</title>
 		<style>
 			.toggle-wrapper{

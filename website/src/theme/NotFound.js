@@ -27,7 +27,7 @@ function NotFound() {
             </h1>
             <p className="homepage-subtitle size-lg">
               <Translate id="theme.NotFound.p1" description="The first paragraph of the 404 page">
-                We could not find what you were looking for.
+                This page does not exist, or it moved.
               </Translate>
             </p>
             <Link

@@ -1,0 +1,103 @@
+---
+title: JavaScript
+sidebar_position: 6
+---
+
+Most of FlatifyCSS is plain CSS, the JavaScript file is only needed for components that open, close or switch: accordions, alerts, dropdowns, popovers, modals, tabs, the show password button and text truncation. There is nothing to call, you add the classes and attributes in your HTML and the script does the rest.
+
+```html title="index.html"
+<!-- Popper is needed for dropdowns and popovers -->
+<script src="https://unpkg.com/@popperjs/core@2" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/js/flatify-min.js" crossorigin="anonymous"></script>
+```
+
+:::info Load it before the page is ready
+Every feature is set up on the `DOMContentLoaded` event, so add the script in the `<head>` or anywhere in the `<body>`, but not with `async` or after the page has loaded. Clicks are listened on the `document`, so elements you add later with JavaScript work too, except the show password button which is bound to the `.input-wrapper` elements that exist when the page loads.
+:::
+
+## Classes and attributes
+
+Here is everything the script looks for in your HTML. Each component page explains them with examples.
+
+### Accordion
+
+| Class or attribute | Where | What it does |
+| --- | --- | --- |
+| `.accordion-toggle` | Button inside `.accordion-header` | Opens or closes its `.accordion-item` |
+| `.expendable` | `.accordion` | Lets more than one item stay open |
+| `.active` | `.accordion-item` | Added when the item is open |
+| `.accordion-will-be-hidden` | `.accordion-collapse` | Added while the hide animation is running |
+
+[Accordion page](/docs/components/accordion)
+
+### Alert
+
+| Class or attribute | Where | What it does |
+| --- | --- | --- |
+| `.close-button` | Button inside `.alert` | Plays the hide animation and removes the alert |
+| `.alert-will-be-removed` | `.alert` | Added while the hide animation is running |
+
+[Alert page](/docs/components/alert)
+
+### Dropdown and popover
+
+| Class or attribute | Where | What it does |
+| --- | --- | --- |
+| `.dropdown-toggle` | Button inside `.dropdown-wrapper` | Opens or closes the `.dropdown` next to it |
+| `.close-dropdown` | Button inside `.dropdown` | Closes the dropdown |
+| `data-dropdown-direction` | `.dropdown` | Where it opens, any [Popper placement](https://popper.js.org/docs/v2/constructors/#options) like `top`, `left-start` or `bottom-end`. Default is `bottom` |
+| `data-dropdown-auto-close` | `.dropdown` | `true` (default) closes on any click, `inside` only on clicks inside it, `outside` only on clicks outside it, `false` never |
+| `.show` | `.dropdown` | Added when it is open |
+| `.dropdown-will-be-hidden` | `.dropdown` | Added while the hide animation is running |
+
+Open dropdowns also close with the <kbd>Escape</kbd> key. [Dropdown page](/docs/components/dropdown), [popover page](/docs/components/popover)
+
+### Modal
+
+| Class or attribute | Where | What it does |
+| --- | --- | --- |
+| `.open-modal` | Any button | Opens the modal set in `data-modal-target` |
+| `.close-modal` | Any button | Closes the modal set in `data-modal-target`, or the modal it is inside |
+| `data-modal-target` | `.open-modal`, `.close-modal` | CSS selector of the modal, like `#my-modal` |
+| `.required` | `.modal` | The modal does not close by clicking the backdrop or pressing <kbd>Escape</kbd> |
+| `.modal-backdrop` | | Created automatically, clicking it closes the open modals |
+| `.modal-will-be-hidden` | `.modal` | Added while the hide animation is running |
+| `.backdrop-will-be-removed` | `.modal-backdrop` | Added while the backdrop fades out |
+
+[Modal page](/docs/components/modal)
+
+### Tabs
+
+| Class or attribute | Where | What it does |
+| --- | --- | --- |
+| `.tab-button` | Button inside `.tabs-header` | Shows its tab panel |
+| `data-tab-target` | `.tab-button` | CSS selector of the panel, if not set `aria-controls` is used |
+| `.active` | `.tab-button` | Added to the current tab button |
+| `.show` | `.tab-panel` | Added to the visible panel |
+| `.slide-left`, `.slide-right` | `.tab-panel` | Added based on the direction you move between tabs |
+| `.tab-will-be-hidden` | `.tab-panel` | Added while the hide animation is running |
+
+[Tabs page](/docs/components/tabs)
+
+### Forms and text
+
+| Class or attribute | Where | What it does |
+| --- | --- | --- |
+| `.show-password-button` | Button inside `.input-wrapper` | Shows or hides the password |
+| `.visible-password` | `.input-wrapper` | Added while the password is visible |
+| `.toggle-truncate` | Any element | Shows or hides the full text of `.truncate` elements |
+| `data-truncation-target` | `.toggle-truncate` | CSS selector of the text to toggle |
+
+[Inputs page](/docs/forms/inputs#password-visibility-toggle), [text truncation page](/docs/helpers/text-truncation)
+
+## Configuration
+
+There is a `config.json` file inside the `/js` folder. It is bundled into `dist/js/flatify.js` when you build, so change it and run `gulp`, read the [development page](/docs/overview/development) for that.
+
+| Option | Default | What it does |
+| --- | --- | --- |
+| `name` | `"FlatifyCSS"` | Prefix of the messages in the console |
+| `enableLogging` | `true` | Shows errors in the console when something is missing, like a modal target that does not exist |
+| `dropdownOffset` | `[0, 20]` | `[skidding, distance]` of dropdowns from their button, in pixels |
+| `navDropdownOffset` | `[0, 0]` | The same for dropdowns inside a [navigation bar](/docs/components/navbar) |
+| `popoverOffset` | `[0, 10]` | The same for [popovers](/docs/components/popover) |

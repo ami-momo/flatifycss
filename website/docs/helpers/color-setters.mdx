@@ -1,6 +1,6 @@
 ---
 title: Color setters
-sidebar_position: 4
+sidebar_position: 7
 ---
 
 import PreviewBox from "../../src/components/preview-box";
@@ -16,7 +16,7 @@ Here is the list of practical helper classes to style elements, for example a bu
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Colors helper classes</title>
         <style>
             .my-box{
@@ -30,13 +30,13 @@ Here is the list of practical helper classes to style elements, for example a bu
 	</head>
 	<body class="flex-center">
 		<div class="my-box flex-center style-blue">
-			<p class="text-centered">Hello Everybody!</p>
+			<p class="text-center">Hello Everybody!</p>
 		</div>
 		<div class="my-box flex-center style-red">
-			<p class="text-centered">Hello Everybody!</p>
+			<p class="text-center">Hello Everybody!</p>
 		</div>
 		<div class="my-box flex-center style-green">
-			<p class="text-centered">Hello Everybody!</p>
+			<p class="text-center">Hello Everybody!</p>
 		</div>
 	</body>
 </html>'
@@ -44,15 +44,15 @@ Here is the list of practical helper classes to style elements, for example a bu
 
 ```html {1,5,9} title="index.html"
 <div class="my-box flex-center style-blue">
-  <p class="text-centered">Hello Everybody!</p>
+  <p class="text-center">Hello Everybody!</p>
 </div>
 
 <div class="my-box flex-center style-red">
-  <p class="text-centered">Hello Everybody!</p>
+  <p class="text-center">Hello Everybody!</p>
 </div>
 
 <div class="my-box flex-center style-green">
-  <p class="text-centered">Hello Everybody!</p>
+  <p class="text-center">Hello Everybody!</p>
 </div>
 ```
 
@@ -66,6 +66,19 @@ Here is the list of practical helper classes to style elements, for example a bu
 }
 ```
 
+## How they work
+
+Each color in the [palette](/docs/overview/colors) gets four classes, `{name}` can be any palette color like `blue`, `danger` or `accent`:
+
+| Class | Background | Text | Border |
+| --- | --- | --- | --- |
+| `.style-{name}` | primary shade | white (the darker shade for yellow and pink, normal text for light) | dark shade |
+| `.style-{name}-light` | light shade | darker shade (white for dark, normal text for light) | primary shade |
+| `.color-{name}` | | primary shade | |
+| `.color-{name}-light` | | light shade | |
+
+The `style-` classes also update the local CSS variables of a component, so a `.button.style-red` gets a red border too, not just a red background.
+
 ## Main colors
 
 <ColorIndicator className="style-accent" title=".style-accent" inline={true} /> UI primary color.
@@ -76,7 +89,7 @@ lighter.
 ## Palette colors
 
 These colors can be declared from the `_config.scss` file or reset with CSS,
-for more information [read this page](#).
+for more information [read the colors page](/docs/overview/colors).
 
 <ColorIndicator className="style-blue-light" title=".style-blue-light" />
 <ColorIndicator className="style-blue" title=".style-blue" />

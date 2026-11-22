@@ -5,7 +5,7 @@ sidebar_position: 1
 
 import PreviewBox from "../../../src/components/preview-box";
 
-Buttons play a big role in any user interface as they give users the ability to interact with the website, so we should use them carefully.  
+Buttons play a big role in any user interface as they give users the ability to interact with the website, so use them carefully.  
 It is necessary to know the good and bad practices for a perfect button.
 First, take a look at [button cheat sheet](https://www.buttoncheatsheet.com/).
 
@@ -22,7 +22,7 @@ A button with FlatifyCSS style can be defined in several ways as mentioned in th
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Buttons</title>
 	</head>
 	<body>
@@ -54,7 +54,7 @@ Generally, there are primary, secondary, and tertiary buttons (link buttons `.li
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Buttons</title>
 	</head>
 	<body>
@@ -88,7 +88,7 @@ These classes just set a `font-size` property so it is possible to change it you
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Buttons</title>
 		<style>
 			@media screen and (max-width: 650px){
@@ -119,7 +119,7 @@ These classes just set a `font-size` property so it is possible to change it you
 
 ## Colors
 
-There are helper classes for styling elements like button, first read about [color setter classes](/docs/helpers/color-setters) for having button with diffrent background and text color.
+There are helper classes for styling elements like button, first read about [color setter classes](/docs/helpers/color-setters) for having button with different background and text color.
 
 <PreviewBox
 	height="330px"
@@ -130,7 +130,7 @@ There are helper classes for styling elements like button, first read about [col
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Buttons</title>
 		<style>
 			@media screen and (max-width: 650px){
@@ -192,7 +192,7 @@ To change roundness there are [roundness helper classes](/docs/helpers/roundness
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Buttons</title>
 		<style>
 			@media screen and (max-width: 650px){
@@ -233,7 +233,7 @@ By default, FlatifyCSS buttons do not have borders however if you add bordered c
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Buttons</title>
 		<style>
 			@media screen and (max-width: 650px){
@@ -295,7 +295,7 @@ Kind of a ninja, which gets less attention but is still influential.
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Buttons</title>
 		<style>
 			@media screen and (max-width: 650px){
@@ -356,7 +356,7 @@ To make a button disabled you can add the `.disabled` class or HTML `disabled` a
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Buttons</title>
 		<style>
 			@media screen and (max-width: 650px){
@@ -384,13 +384,25 @@ To make a button disabled you can add the `.disabled` class or HTML `disabled` a
 <button class="button style-accent static">Static</button>
 ```
 
+## Reset styles
+
+Sometimes you need a `<button>` for accessibility, but it should look like plain text or an icon. The `.no-style` class removes background, border, outline and shadow and keeps only a small padding:
+
+```html title="index.html"
+<button class="no-style" aria-label="Like">❤️</button>
+```
+
+Note that `.no-style` works on `<button>` elements, not on `.button` links.
+
 ## Customization
 
 Each button has these CSS variables for customization, they can be set as `:root` for all buttons default style or just for a specific selector.
 
-`--flatify__button-txt-color`  
-`--flatify__button-bg-color`  
-`--flatify__button-border-color`
+| Variable | Default |
+| --- | --- |
+| `--flatify__button-txt-color` | `var(--flatify__txt-color)` |
+| `--flatify__button-bg-color` | `var(--flatify__bg-color-dark)` |
+| `--flatify__button-border-color` | `var(--flatify__bg-color-darker)` |
 
 <PreviewBox
 	height="330px"
@@ -401,7 +413,7 @@ Each button has these CSS variables for customization, they can be set as `:root
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Buttons</title>
 		<style>
 			.my-button-1{

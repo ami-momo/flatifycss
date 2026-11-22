@@ -16,7 +16,7 @@ It is easy to create one just add `.breadcrumbs` class and create children with 
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Breadcrumbs</title>
 	</head>
 	<body class="flex-center">
@@ -44,7 +44,7 @@ It is easy to create one just add `.breadcrumbs` class and create children with 
 </nav>
 ```
 
-:::success Accesibility matters!
+:::tip Accessibility matters!
 Always add [`aria-current="location"`](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-current) for the last breadcrumbs item, it determines it is the current page which helps screen reader users a lot.
 :::
 
@@ -61,7 +61,7 @@ When there are a lot of breadcrumbs items which overflow, breadcrumbs will be sc
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Breadcrumbs</title>
 	</head>
 	<body class="flex-column-center">
@@ -96,7 +96,7 @@ These classes just set a `font-size` property so it is possible to change it you
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Breadcrumbs</title>
 	</head>
 	<body class="flex-column-center">
@@ -151,7 +151,7 @@ These classes just set a `font-size` property so it is possible to change it you
 
 ## Colors
 
-There are helper classes for styling elements like breadcrumbs, first read about [color setter classes](/docs/helpers/color-setters) for having button with diffrent background and text color.
+There are helper classes for styling elements like breadcrumbs, first read about [color setter classes](/docs/helpers/color-setters) for having button with different background and text color.
 
 <PreviewBox
   height="290px"
@@ -162,7 +162,7 @@ There are helper classes for styling elements like breadcrumbs, first read about
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Breadcrumbs</title>
 	</head>
 	<body class="flex-column-center">
@@ -233,9 +233,11 @@ There are helper classes for styling elements like breadcrumbs, first read about
 
 Each breadcrumbs has these CSS variables for customization, they can be set as `:root` for all breadcrumbs default style or just for a specific selector.
 
-`--flatify__breadcrumb-txt-color`  
-`--flatify__breadcrumb-bg-color`  
-`--flatify__breadcrumb-border-color`
+| Variable | Default |
+| --- | --- |
+| `--flatify__breadcrumbs-txt-color` | `var(--flatify__txt-color)` |
+| `--flatify__breadcrumbs-bg-color` | `var(--flatify__bg-color)` |
+| `--flatify__breadcrumbs-border-color` | `var(--flatify__bg-color-darker)` |
 
 <PreviewBox
   height="110px"
@@ -246,13 +248,13 @@ Each breadcrumbs has these CSS variables for customization, they can be set as `
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Breadcrumbs</title>
         <style>
             .my-custom-breadcrumbs{
-                --flatify__breadcrumb-txt-color: #F5F7FA;
-                --flatify__breadcrumb-bg-color: #AA8E69;
-                --flatify__breadcrumb-border-color: #BAA286;
+                --flatify__breadcrumbs-txt-color: #F5F7FA;
+                --flatify__breadcrumbs-bg-color: #AA8E69;
+                --flatify__breadcrumbs-border-color: #BAA286;
                 --flatify__link-color: #FFCE54;
                 --flatify__link-color__hover: #F6BB42;
                 --flatify__link-color__focus: #A0D468;
@@ -287,9 +289,9 @@ Each breadcrumbs has these CSS variables for customization, they can be set as `
 ```css title="style.css"
 .my-custom-breadcrumbs {
   /* custom breadcrumbs colors */
-  --flatify__breadcrumb-txt-color: #f5f7fa;
-  --flatify__breadcrumb-bg-color: #aa8e69;
-  --flatify__breadcrumb-border-color: #baa286;
+  --flatify__breadcrumbs-txt-color: #f5f7fa;
+  --flatify__breadcrumbs-bg-color: #aa8e69;
+  --flatify__breadcrumbs-border-color: #baa286;
 
   /* custom breadcrumbs links */
   --flatify__link-color: #ffce54;

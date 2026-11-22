@@ -1,6 +1,6 @@
 ---
 title: Roundness setters
-sidebar_position: 7
+sidebar_position: 11
 ---
 
 import PreviewBox from "../../src/components/preview-box";
@@ -44,12 +44,25 @@ There are classes to make element edges sharp, round, circle...
 <ColorIndicator style={{ width: "6em", height: "4em" }} className="edge-oval" color="#1cb0f6" title=".edge-oval" />
 <br />
 
+| Class | `border-radius` |
+| --- | --- |
+| `.edge-sharp` | `0em` |
+| `.edge-round-xs` | `0.32em` |
+| `.edge-round-sm` | `0.5em` |
+| `.edge-round-md` | `0.75em` |
+| `.edge-round-lg` | `1em` |
+| `.edge-circle` | `50em` |
+| `.edge-oval` | `50%` |
+| `.edge-triangle` | `100% 50% 50% 100% / 75% 69% 69% 75%` |
+
 :::info Custom helper classes
-Note that these classes can be customized in `_config.scss` file (excepts sharp, circle and oval),
+Note that these classes can be customized in `_config.scss` file (except sharp, circle and oval),
 there is a variable called `$BORDER_RADIUS_LIST`,
 These classes are generated from this list.
 So it is possible to create customized helper classes for roundness simply!
 :::
+
+In the example below, three new shapes are added to the defaults:
 
 ```scss {12-14} title="_config.scss"
 // This list will be converted to helper classes.

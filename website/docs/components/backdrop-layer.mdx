@@ -19,7 +19,7 @@ Backdrops are simple despite being customizable, note that they are hidden by de
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Backdrop layer</title>
 	</head>
 	<body>
@@ -50,10 +50,12 @@ Elements that have a higher `z-index` than the backdrop layer will be shown on t
 
 Here is the list of CSS variables that can be customized for the backdrop layer:
 
-`--flatify__backdrop-priority` defautlt: 1030  
-`--flatify__backdrop-color`  
-`--flatify__backdrop-opacity` defautlt: 0.5  
-`--flatify__backdrop-filter`
+| Variable | Default |
+| --- | --- |
+| `--flatify__backdrop-priority` | `1030` |
+| `--flatify__backdrop-color` | `var(--flatify__txt-color)` |
+| `--flatify__backdrop-opacity` | `0.5` |
+| `--flatify__backdrop-filter` | `none` |
 
 For example you use `--flatify__backdrop-filter` to set blur effect which is a common effect for backdrops nowadays:
 
@@ -66,7 +68,7 @@ For example you use `--flatify__backdrop-filter` to set blur effect which is a c
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Backdrop layer</title>
         <style>
             .my-backdrop{

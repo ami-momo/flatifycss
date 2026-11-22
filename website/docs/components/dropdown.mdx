@@ -8,7 +8,7 @@ Dropdowns typically provide a list of items to interact with, however, it is pos
 
 ## A simple dropdown
 
-To create a simple dropdown, we need a [button](docs/components/buttons/button) (specifically an [arrow button](/docs/components/buttons/arrow-button)) with `.dropdown-toggle` class, [menu](docs/components/menu) with `.dropdown` class, also they should be wrapped by `.dropdown-wrapper` class. These are basics and they should have some special classes to work that you can see in the example below.
+To create a simple dropdown, you need a [button](/docs/components/buttons/button) (specifically an [arrow button](/docs/components/buttons/arrow-button)) with `.dropdown-toggle` class, [menu](/docs/components/menu) with `.dropdown` class, also they should be wrapped by `.dropdown-wrapper` class. These are basics and they should have some special classes to work that you can see in the example below.
 
 <PreviewBox
 	height="430px"
@@ -19,10 +19,10 @@ To create a simple dropdown, we need a [button](docs/components/buttons/button) 
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Dropdown</title>
 		<script src="https://unpkg.com/@popperjs/core@2"></script>
-		<script src="https://raw.githack.com/amir2mi/flatifycss/master/dist/js/flatify-min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/js/flatify-min.js"></script>
 	</head>
 	<body>
         <div class="dropdown-wrapper">
@@ -104,7 +104,7 @@ There is an attribute called `aria-labelledby` you can read about [its use-cases
 
 ## Directions
 
-We call them dropdown but they can come from left, right, or top as well. To set a position for dropdown there is an HTML attribute called `data-dropdown-direction`, it accepts `top`, `bottom` (as default), `right` or `left` and should be added to the `.dropdown` element.
+They are called dropdowns but they can come from left, right, or top as well. To set a position for dropdown there is an HTML attribute called `data-dropdown-direction`, it accepts `top`, `bottom` (as default), `right` or `left` and should be added to the `.dropdown` element.
 
 <PreviewBox
 	height="450px"
@@ -115,10 +115,10 @@ We call them dropdown but they can come from left, right, or top as well. To set
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Dropdown</title>
 		<script src="https://unpkg.com/@popperjs/core@2"></script>
-		<script src="https://raw.githack.com/amir2mi/flatifycss/master/dist/js/flatify-min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/js/flatify-min.js"></script>
 	</head>
 	<body>
 		<div class="flex-center" style="justify-content: space-between">
@@ -229,7 +229,7 @@ We call them dropdown but they can come from left, right, or top as well. To set
 </div>
 ```
 
-:::success Keyboard friendly
+:::tip Keyboard friendly
 Note that dropdowns are keyboard friendly, since pressing <kbd>ESC</kbd> will hide active dropdowns.
 :::
 
@@ -242,7 +242,7 @@ Dropdowns by default will be closed on clicked outside and inside, you can chang
 `inside` Close dropdown when clicked inside of its area  
 `false` Do not close dropdown automatically (you need to handle closing dropdown manually or you can use the dropdown close button).
 
-:::success Handle closing dropdown with a button
+:::tip Handle closing dropdown with a button
 You might set `data-dropdown-auto-close` to `false` and handle dropdown manually, however, there is a button that handles closing dropdown on click, all you need to do is add a button inside `.dropdown-wrapper` with the `.close-dropdown` class.
 :::
 
@@ -255,10 +255,10 @@ You might set `data-dropdown-auto-close` to `false` and handle dropdown manually
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Dropdown</title>
 		<script src="https://unpkg.com/@popperjs/core@2"></script>
-		<script src="https://raw.githack.com/amir2mi/flatifycss/master/dist/js/flatify-min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/js/flatify-min.js"></script>
 	</head>
 	<body>
 		<div class="flex-center" style="justify-content: space-between">
@@ -385,10 +385,10 @@ This is common for dropdowns to be opened by an arrow button that is stuck with 
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Dropdown</title>
 		<script src="https://unpkg.com/@popperjs/core@2"></script>
-		<script src="https://raw.githack.com/amir2mi/flatifycss/master/dist/js/flatify-min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/js/flatify-min.js"></script>
 	</head>
 	<body class="flex-center">
 		<div class="dropdown-wrapper">
@@ -429,10 +429,10 @@ Items group is a mockup component that is well suited as dropdown items, [read m
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Dropdown</title>
 		<script src="https://unpkg.com/@popperjs/core@2"></script>
-		<script src="https://raw.githack.com/amir2mi/flatifycss/master/dist/js/flatify-min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/js/flatify-min.js"></script>
 	</head>
 	<body class="flex-center">
 		<div class="dropdown-wrapper free-size size-xs">
@@ -512,7 +512,7 @@ Items group is a mockup component that is well suited as dropdown items, [read m
 
 ## Sizes
 
-To change the drop size use [size setter classes](/docs/helpers/size-setters).
+To change the dropdown size use [size setter classes](/docs/helpers/size-setters).
 These classes just set a `font-size` property so it is possible to change it yourself by writing custom CSS.
 
 <PreviewBox
@@ -524,10 +524,10 @@ These classes just set a `font-size` property so it is possible to change it you
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Dropdown</title>
 		<script src="https://unpkg.com/@popperjs/core@2"></script>
-		<script src="https://raw.githack.com/amir2mi/flatifycss/master/dist/js/flatify-min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/js/flatify-min.js"></script>
 	</head>
 	<body class="flex-center">
 		<div class="dropdown-wrapper size-xs">
@@ -601,10 +601,10 @@ Do not add color setter classes to `.dropdown-wrapper`, inside the wrapper there
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Dropdown</title>
 		<script src="https://unpkg.com/@popperjs/core@2"></script>
-		<script src="https://raw.githack.com/amir2mi/flatifycss/master/dist/js/flatify-min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/js/flatify-min.js"></script>
 	</head>
 	<body class="flex-center">
 		<div class="dropdown-wrapper">
@@ -674,15 +674,21 @@ Do not add color setter classes to `.dropdown-wrapper`, inside the wrapper there
 You can customize dropdowns, they offer you CSS variables to change, as you might be noticed a typical dropdown uses menu items because it is a [submenu](/docs/components/menu#submenu), to customize them check [menu component customization](/docs/components/menu#customization).
 These are dropdowns CSS variables:
 
-`--flatify__submenu-bg-color`  
-`--flatify__submenu-txt-color`  
-`--flatify__submenu-border-color`
+| Variable | Default |
+| --- | --- |
+| `--flatify__submenu-bg-color` | `var(--flatify__bg-color)` |
+| `--flatify__submenu-txt-color` | `var(--flatify__txt-color)` |
+| `--flatify__submenu-border-color` | `var(--flatify__bg-color-darker)` |
 
-`--flatify__dropdown-animation-show-duration`  
-`--flatify__dropdown-animation-hide-duration`
+| Variable | Default |
+| --- | --- |
+| `--flatify__dropdown-animation-show-duration` | `300ms` |
+| `--flatify__dropdown-animation-hide-duration` | `200ms` |
 
-`--flatify__dropdown-animation-show`  
-`--flatify__dropdown-animation-hide`
+| Variable | Default |
+| --- | --- |
+| `--flatify__dropdown-animation-show` | `flatify-dropdown-show var(--flatify__dropdown-animation-show-duration) cubic-bezier(0.52, 0.42, 0.44, 1.44)` |
+| `--flatify__dropdown-animation-hide` | `flatify-dropdown-hide var(--flatify__dropdown-animation-hide-duration) cubic-bezier(0.52, 0.42, 0.44, 1.44) both` |
 
 It is possible to change colors, animations duration, or change the whole animation, here is an example of customized dropdown:
 
@@ -695,7 +701,7 @@ It is possible to change colors, animations duration, or change the whole animat
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Dropdown</title>
 		<style>
 			@keyframes my-dropdown-show-animation{
@@ -737,7 +743,7 @@ It is possible to change colors, animations duration, or change the whole animat
 			}
     	</style>
     	<script src="https://unpkg.com/@popperjs/core@2"></script>
-    	<script src="https://raw.githack.com/amir2mi/flatifycss/master/dist/js/flatify-min.js"></script>
+    	<script src="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/js/flatify-min.js"></script>
     </head>
     <body class="flex-center">
     	<div class="dropdown-wrapper my-custom-dropdown">

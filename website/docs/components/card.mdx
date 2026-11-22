@@ -9,7 +9,7 @@ Each card has a header, body, and footer, it can be vertical or horizontal based
 
 ## Vertical
 
-The card is displayed vertically by default, just add the necessary part and, voilà! we have a vertical card.
+The card is displayed vertically by default, just add the necessary part and, voilà! a vertical card.
 
 <PreviewBox
   height="420px"
@@ -20,7 +20,7 @@ The card is displayed vertically by default, just add the necessary part and, vo
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Card</title>
 		<style>
 			.card-action-buttons svg{
@@ -68,9 +68,9 @@ The card is displayed vertically by default, just add the necessary part and, vo
 '
 />
 
-:::success Consider using semantic HTML
-We can give our card semantic HTML, it is a good practice to use semantic HTML, because it is easier to read and understand both for screen readers and robots.  
-So we have `<header>` HTML tag for our the card header and `<footer>` HTML tag for our card footer. The whole card is wrapped in `<article>` HTML tag and cards can be inside a parent with `<section>` HTML tag.
+:::tip Consider using semantic HTML
+You can give your card semantic HTML, it is a good practice to use semantic HTML, because it is easier to read and understand both for screen readers and robots.  
+So use the `<header>` HTML tag for the card header and the `<footer>` HTML tag for the card footer. The whole card is wrapped in `<article>` HTML tag and cards can be inside a parent with `<section>` HTML tag.
 :::
 
 ```html title="index.html"
@@ -122,7 +122,7 @@ It is suggested to set a fixed height or maximum height for the card with the `.
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Card</title>
 		<style>
 			.card-action-buttons svg{
@@ -218,7 +218,7 @@ These classes just set a `font-size` property so it is possible to change it you
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Card</title>
 		<style>
 			.card-action-buttons svg{
@@ -271,11 +271,13 @@ These classes just set a `font-size` property so it is possible to change it you
 
 ## Colors & customization
 
-You can use [color setter helpr classes](/docs/helpers/color-setters) or change the CSS variables of cards:
+You can use [color setter helper classes](/docs/helpers/color-setters) or change the CSS variables of cards:
 
-`--flatify__card-txt-color`  
-`--flatify__card-bg-color`  
-`--flatify__card-border-color`
+| Variable | Default |
+| --- | --- |
+| `--flatify__card-txt-color` | `var(--flatify__txt-color)` |
+| `--flatify__card-bg-color` | `var(--flatify__bg-color)` |
+| `--flatify__card-border-color` | `var(--flatify__bg-color-darker)` |
 
 Here is an example of how to use the variables:
 
@@ -288,7 +290,7 @@ Here is an example of how to use the variables:
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Card</title>
 		<style>
 			.card-action-buttons svg{
@@ -337,7 +339,7 @@ Here is an example of how to use the variables:
 }
 ```
 
-We can go further and move the title over the image and use [overlay layer](/docs/helpers/overlay-layer) for clarifying the title:
+You can go further and move the title over the image and use [overlay layer](/docs/helpers/overlay-layer) for clarifying the title:
 
 <PreviewBox
   height="320px"
@@ -348,7 +350,7 @@ We can go further and move the title over the image and use [overlay layer](/doc
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Card</title>
 		<style>
 			.card-action-buttons svg{

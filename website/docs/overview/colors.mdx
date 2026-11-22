@@ -3,19 +3,23 @@ title: Colors
 sidebar_position: 2
 ---
 
-FlatifyCSS comes with a set of predefined colors and [color setter helper classes](/docs/helpers/color-setters). On this page, we listed all the colors that are related to FlatifyCSS.
+import ColorIndicator from "@site/src/components/color-indicator";
+
+FlatifyCSS comes with a set of predefined colors and [color setter helper classes](/docs/helpers/color-setters). This page lists all the colors that are related to FlatifyCSS.
+
+The swatches below are the full design palette, handy when you design a page around FlatifyCSS. The framework itself uses four shades of each color, you can find them in the [palette variables](#palette-variables) table.
 
 <div className="flex-center colors-wrapper-columns">
   <div className="flex-column-center colors-wrapper">
     <div style={{ background: "#ffffff", color: "#090d10" }}>#ffffff</div>
-    <div style={{ background: "#eff2f6", color: "#1c2731" }}>#eff2f6</div>
+    <div style={{ background: "#f1f4f7", color: "#1c2731" }}>#f1f4f7</div>
     <div style={{ background: "#ced9e3", color: "#2f4051" }}>#ced9e3</div>
     <div style={{ background: "#aec0d0", color: "#415a71" }}>#aec0d0</div>
     <div style={{ background: "#809cb6", color: "#ffffff" }}>#809cb6</div>
     <div style={{ background: "#6d8dab", color: "#ffffff" }}>#6d8dab</div>
     <div style={{ background: "#547492", color: "#ffffff" }}>#547492</div>
     <div style={{ background: "#415a71", color: "#ffffff" }}>#415a71</div>
-    <div style={{ background: "#2f4051", color: "#ffffff" }}>#2f4051</div>
+    <div style={{ background: "#2e4051", color: "#ffffff" }}>#2e4051</div>
     <div style={{ background: "#1e2a35", color: "#ffffff" }}>#1e2a35</div>
     <div style={{ background: "#090d10", color: "#ffffff" }}>#090d10</div>
   </div>
@@ -111,3 +115,54 @@ FlatifyCSS comes with a set of predefined colors and [color setter helper classe
     <div style={{ background: "#295f01", color: "#ffffff" }}>#295f01</div>
   </div>
 </div>
+
+## Palette variables
+
+Every color has four shades and each one is a CSS variable with this pattern: `--flatify__color-{name}-{shade}`, for example `--flatify__color-red-dark`. The state colors like `success` and `danger` are just aliases, so if you change the green color, success changes too.
+
+| Name | `primary` | `light` | `dark` | `darker` |
+| --- | --- | --- | --- | --- |
+| `blue` | <ColorIndicator inline color="#1cb0f6" title="#1cb0f6" /> | <ColorIndicator inline color="#77d0fa" title="#77d0fa" /> | <ColorIndicator inline color="#1896d1" title="#1896d1" /> | <ColorIndicator inline color="#0e587b" title="#0e587b" /> |
+| `green` | <ColorIndicator inline color="#58cc02" title="#58cc02" /> | <ColorIndicator inline color="#9be067" title="#9be067" /> | <ColorIndicator inline color="#4bad02" title="#4bad02" /> | <ColorIndicator inline color="#2c6601" title="#2c6601" /> |
+| `yellow` | <ColorIndicator inline color="#ffde00" title="#ffde00" /> | <ColorIndicator inline color="#ffeb66" title="#ffeb66" /> | <ColorIndicator inline color="#d9bd00" title="#d9bd00" /> | <ColorIndicator inline color="#a69000" title="#a69000" /> |
+| `orange` | <ColorIndicator inline color="#ff9600" title="#ff9600" /> | <ColorIndicator inline color="#ffc066" title="#ffc066" /> | <ColorIndicator inline color="#d98000" title="#d98000" /> | <ColorIndicator inline color="#804b00" title="#804b00" /> |
+| `red` | <ColorIndicator inline color="#ff4b4b" title="#ff4b4b" /> | <ColorIndicator inline color="#ff9393" title="#ff9393" /> | <ColorIndicator inline color="#d94040" title="#d94040" /> | <ColorIndicator inline color="#802626" title="#802626" /> |
+| `pink` | <ColorIndicator inline color="#ff86d0" title="#ff86d0" /> | <ColorIndicator inline color="#ffb6e3" title="#ffb6e3" /> | <ColorIndicator inline color="#d972b1" title="#d972b1" /> | <ColorIndicator inline color="#804368" title="#804368" /> |
+| `purple` | <ColorIndicator inline color="#c164ff" title="#c164ff" /> | <ColorIndicator inline color="#daa2ff" title="#daa2ff" /> | <ColorIndicator inline color="#a455d9" title="#a455d9" /> | <ColorIndicator inline color="#613280" title="#613280" /> |
+| `accent` (blue) | <ColorIndicator inline color="#1cb0f6" title="#1cb0f6" /> | <ColorIndicator inline color="#77d0fa" title="#77d0fa" /> | <ColorIndicator inline color="#1896d1" title="#1896d1" /> | <ColorIndicator inline color="#0e587b" title="#0e587b" /> |
+| `success` (green) | <ColorIndicator inline color="#58cc02" title="#58cc02" /> | <ColorIndicator inline color="#9be067" title="#9be067" /> | <ColorIndicator inline color="#4bad02" title="#4bad02" /> | <ColorIndicator inline color="#2c6601" title="#2c6601" /> |
+| `info` (blue) | <ColorIndicator inline color="#1cb0f6" title="#1cb0f6" /> | <ColorIndicator inline color="#77d0fa" title="#77d0fa" /> | <ColorIndicator inline color="#1896d1" title="#1896d1" /> | <ColorIndicator inline color="#0e587b" title="#0e587b" /> |
+| `warning` (orange) | <ColorIndicator inline color="#ff9600" title="#ff9600" /> | <ColorIndicator inline color="#ffc066" title="#ffc066" /> | <ColorIndicator inline color="#d98000" title="#d98000" /> | <ColorIndicator inline color="#804b00" title="#804b00" /> |
+| `danger` (red) | <ColorIndicator inline color="#ff4b4b" title="#ff4b4b" /> | <ColorIndicator inline color="#ff9393" title="#ff9393" /> | <ColorIndicator inline color="#d94040" title="#d94040" /> | <ColorIndicator inline color="#802626" title="#802626" /> |
+| `light` (background grays) | <ColorIndicator inline color="#f1f4f7" title="#f1f4f7" /> | <ColorIndicator inline color="#ffffff" title="#ffffff" /> | <ColorIndicator inline color="#ced9e3" title="#ced9e3" /> | <ColorIndicator inline color="#809cb6" title="#809cb6" /> |
+| `dark` (text colors) | <ColorIndicator inline color="#2e4051" title="#2e4051" /> | <ColorIndicator inline color="#77838e" title="#77838e" /> | <ColorIndicator inline color="#1e2a35" title="#1e2a35" /> | <ColorIndicator inline color="#121a20" title="#121a20" /> |
+
+## Base colors
+
+Background and text colors are separate from the palette:
+
+| CSS variable | Default | Used for |
+| --- | --- | --- |
+| `--flatify__bg-color` | <ColorIndicator inline color="#ffffff" title="#ffffff" /> | Page background |
+| `--flatify__bg-color-dark` | <ColorIndicator inline color="#f1f4f7" title="#f1f4f7" /> | Default background of buttons, alerts, menus and form elements |
+| `--flatify__bg-color-darker` | <ColorIndicator inline color="#ced9e3" title="#ced9e3" /> | Default border color of most components |
+| `--flatify__bg-color-darkest` | <ColorIndicator inline color="#809cb6" title="#809cb6" /> | The darkest gray, free for your own designs |
+| `--flatify__txt-color` | <ColorIndicator inline color="#2e4051" title="#2e4051" /> | Text |
+| `--flatify__txt-color-light` | <ColorIndicator inline color="#77838e" title="#77838e" /> | Muted text |
+| `--flatify__txt-color-dark` | <ColorIndicator inline color="#1e2a35" title="#1e2a35" /> | Darker text, like highlighted text |
+| `--flatify__txt-color-inverted` | <ColorIndicator inline color="#ffffff" title="#ffffff" /> | Text on colored backgrounds, like badges |
+
+## Changing colors
+
+If you build FlatifyCSS with Sass, change the color variables in `_config.scss` (like `$BLUE` or `$ACCENT_COLOR`) and the light and dark shades are generated for you. With the compiled CSS, override the CSS variables instead:
+
+```css title="style.css"
+:root {
+  --flatify__color-accent-primary: #8e44ad;
+  --flatify__color-accent-light: #c39bd3;
+  --flatify__color-accent-dark: #76369a;
+  --flatify__color-accent-darker: #4a235a;
+}
+```
+
+Read more on the [customization page](/docs/overview/customization).

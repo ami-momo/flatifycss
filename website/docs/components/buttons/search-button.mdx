@@ -19,7 +19,7 @@ You do not need to add anything inside the search button element but it is neces
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Search button</title>
 		<style>
 			.search-button{
@@ -29,8 +29,8 @@ You do not need to add anything inside the search button element but it is neces
 	</head>
 	<body>
         <div class="flex-center">
-			<button class="search-button" aria-label="Search"/></button>
-			<button class="button search-button" aria-label="Search"/></button>
+			<button class="search-button" aria-label="Search"></button>
+			<button class="button search-button" aria-label="Search"></button>
 		</div>
 	</body>
 </html>
@@ -39,10 +39,10 @@ You do not need to add anything inside the search button element but it is neces
 
 ```html title="index.html"
 <button class="search-button" aria-label="Search"></button>
-<button class="button search-button" aria-label="Search"/></button>
+<button class="button search-button" aria-label="Search"></button>
 ```
 
-### Sizes
+## Sizes
 
 To change the button size use [size setter classes](/docs/helpers/size-setters).
 These classes just set a `font-size` property so it is possible to change it yourself by writing custom CSS.
@@ -56,7 +56,7 @@ These classes just set a `font-size` property so it is possible to change it you
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Search button</title>
 		<style>
 			.search-button{
@@ -82,9 +82,9 @@ These classes just set a `font-size` property so it is possible to change it you
 <button class="search-button size-2x" aria-label="Search"></button>
 ```
 
-### Colors
+## Colors
 
-There are helper classes for styling elements like button, first read about [color setter classes](/docs/helpers/color-setters) for having button with diffrent background and text color.
+There are helper classes for styling elements like button, first read about [color setter classes](/docs/helpers/color-setters) for having button with different background and text color.
 
 <PreviewBox
   height="100px"
@@ -95,7 +95,7 @@ There are helper classes for styling elements like button, first read about [col
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Search button</title>
 		<style>
 			.search-button{
@@ -108,7 +108,7 @@ There are helper classes for styling elements like button, first read about [col
 			<button class="search-button style-success" aria-label="Search"></button>
 			<button class="search-button style-warning" aria-label="Search"></button>
 			<button class="search-button style-purple" aria-label="Search"></button>
-			<button class="search-button style-red" aria-label="Search"/></button>
+			<button class="search-button style-red" aria-label="Search"></button>
 			<button class="search-button color-success" aria-label="Search"></button>
 			<button class="search-button color-warning" aria-label="Search"></button>
 			<button class="search-button color-purple" aria-label="Search"></button>
@@ -131,7 +131,7 @@ There are helper classes for styling elements like button, first read about [col
 <button class="search-button color-red" aria-label="Search"></button>
 ```
 
-### Change close icon
+## Change search icon
 
 It is possible to change the search button icon with both `_config.scss` and CSS variables.
 

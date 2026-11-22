@@ -22,40 +22,27 @@ $RESPONSIVE_BREAKPOINTS: (
 
 ## Responsive mixins
 
-Here is the list of all available responsive mixins:
+Here is the list of all available responsive mixins and the media queries they make with the default breakpoints:
 
-### Extra small
+| Mixin | Screen | Media query |
+| --- | --- | --- |
+| `break-xs()` | Extra small | `(max-width: 575.98px)` |
+| `break-sm()` | Small | `(min-width: 576px) and (max-width: 767px)` |
+| `break-sm-min()` | Small and up | `(min-width: 576px)` |
+| `break-sm-max()` | Below small | `(max-width: 575.98px)` |
+| `break-md()` | Medium | `(min-width: 768px) and (max-width: 991px)` |
+| `break-md-min()` | Medium and up | `(min-width: 768px)` |
+| `break-md-max()` | Below medium | `(max-width: 767.98px)` |
+| `break-lg()` | Large | `(min-width: 992px) and (max-width: 1199px)` |
+| `break-lg-min()` | Large and up | `(min-width: 992px)` |
+| `break-lg-max()` | Below large | `(max-width: 991.98px)` |
+| `break-xl()` | Extra large | `(min-width: 1200px) and (max-width: 1399px)` |
+| `break-xl-min()` | Extra large and up | `(min-width: 1200px)` |
+| `break-xl-max()` | Below extra large | `(max-width: 1199.98px)` |
+| `break-xxl()` | Extra extra large and up | `(min-width: 1400px)` |
+| `break-xxl-max()` | Below extra extra large | `(max-width: 1399.98px)` |
 
-`break-xs()`
-
-### Small
-
-`break-sm()`  
-`break-sm-min()`  
-`break-sm-max()`
-
-### Medium
-
-`break-md()`  
-`break-md-min()`  
-`break-md-max()`
-
-### Large
-
-`break-lg()`  
-`break-lg-min()`  
-`break-lg-max()`
-
-### Extra large
-
-`break-xl()`  
-`break-xl-min()`  
-`break-xl-max()`
-
-### Extra extra large
-
-`break-xxl()`  
-`break-xxl-max()`
+All of them use `screen`, for example `@media screen and (min-width: 576px)`.
 
 ## Use responsive mixins
 

@@ -6,7 +6,7 @@ sidebar_position: 3
 import PreviewBox from "../../src/components/preview-box";
 
 Default checkboxes can be customized with FlatifyCSS, it is done with pure CSS which has a clean design and is keyboard friendly, also easy to have one.  
-First you need to wrap your checkbox with the `.checkbox-wrapper` class (it is better to wrap with `<label> tag`), and add `<span class="check"></span> after the input, that is it and now you have a custom checkbox.
+First you need to wrap your checkbox with the `.checkbox-wrapper` class (it is better to wrap with `<label>` tag), and add `<span class="check"></span>` after the input, that is it and now you have a custom checkbox.
 
 <PreviewBox
   height="100px"
@@ -16,7 +16,7 @@ First you need to wrap your checkbox with the `.checkbox-wrapper` class (it is b
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Checkboxes</title>
 	</head>
 	<body>
@@ -58,7 +58,7 @@ helps you understand its usage more.
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Checkboxes</title>
 	</head>
 	<body>
@@ -111,7 +111,7 @@ These classes just set a `font-size` property so it is possible to change it you
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Checkboxes</title>
 	</head>
 	<body>
@@ -177,7 +177,7 @@ It is possible to change checkboxes appearance similar to buttons, it is a bit d
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Checkboxes</title>
 	</head>
 	<body>
@@ -217,14 +217,16 @@ It is possible to change checkboxes appearance similar to buttons, it is a bit d
 
 There are CSS variables for customizing checkboxes:
 
-`--flatify__form-element-accent-color`  
-`--flatify__form-element-bg-color`  
-`--flatify__form-element-txt-color`  
-`--flatify__form-element-border-color`  
-`--flatify__form-element-border-color__focus`  
-`--flatify__form-element-border-color__valid`  
-`--flatify__form-element-border-color__warning`  
-`--flatify__form-element-border-color__invalid`
+| Variable | Default |
+| --- | --- |
+| `--flatify__form-element-accent-color` | `var(--flatify__color-accent-primary)` |
+| `--flatify__form-element-bg-color` | `var(--flatify__bg-color-dark)` |
+| `--flatify__form-element-txt-color` | `var(--flatify__txt-color)` |
+| `--flatify__form-element-border-color` | `var(--flatify__bg-color-darker)` |
+| `--flatify__form-element-border-color__focus` | `var(--flatify__form-element-accent-color)` |
+| `--flatify__form-element-border-color__valid` | `var(--flatify__color-success-primary)` |
+| `--flatify__form-element-border-color__warning` | `var(--flatify__color-warning-primary)` |
+| `--flatify__form-element-border-color__invalid` | `var(--flatify__color-danger-primary)` |
 
 Here is an example of these variables usage:
 
@@ -236,7 +238,7 @@ Here is an example of these variables usage:
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Inputs</title>
 		<style>
 			.checkbox-wrapper{

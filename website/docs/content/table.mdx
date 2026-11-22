@@ -6,7 +6,7 @@ import PreviewBox from "../../src/components/preview-box";
 
 Tables allow web developers to arrange data into rows and columns, with FlatifyCSS you can have striped, bordered, and customized one vertical or horizontal.
 
-### Bordered
+## Bordered
 
 First, create a simple HTML table, then add the `.bordered` class to the table:
 
@@ -19,7 +19,7 @@ First, create a simple HTML table, then add the `.bordered` class to the table:
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Table</title>
 	</head>
 	<body>
@@ -121,7 +121,7 @@ First, create a simple HTML table, then add the `.bordered` class to the table:
 </table>
 ```
 
-### Striped
+## Striped
 
 A striped table has **different odd rows** for helping readers to know which row they are looking at. To have a striped style add the `.striped` class to the table.
 
@@ -134,7 +134,7 @@ A striped table has **different odd rows** for helping readers to know which row
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Table</title>
 	</head>
 	<body>
@@ -191,9 +191,9 @@ A striped table has **different odd rows** for helping readers to know which row
 </table>
 ```
 
-### Horizontal
+## Horizontal
 
-By default, tables are vertical however for small screens and other use cases, we might need to have a horizontal table, it is possible with adding the ` horizontal` class to the table:
+By default, tables are vertical however for small screens and other use cases, you might need a horizontal table, it is possible with adding the `.horizontal` class to the table:
 
 <PreviewBox
   height="235px"
@@ -204,7 +204,7 @@ By default, tables are vertical however for small screens and other use cases, w
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Table</title>
 	</head>
 	<body>
@@ -261,7 +261,7 @@ By default, tables are vertical however for small screens and other use cases, w
 </table>
 ```
 
-### Centered
+## Centered
 
 By adding the `.text-center` class to the table, texts will be centered.
 
@@ -274,11 +274,11 @@ By adding the `.text-center` class to the table, texts will be centered.
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Table</title>
 	</head>
 	<body>
-		<table class="striped text-centered">
+		<table class="striped text-center">
 			<thead>
 				<tr>
 					<th>Student</th>
@@ -326,14 +326,16 @@ By adding the `.text-center` class to the table, texts will be centered.
 />
 
 ```html {1} title="index.html"
-<table class="striped text-centered">
+<table class="striped text-center">
   ...
 </table>
 ```
 
-### Styling table items
+## Styling table items
 
-With helper classes we can have specific table items with various background and colors, [See here](/docs/helpers/color-setters), is the list of helper classes. for styling elements based on CSS background and color properties. For example, lets show which student was better and who needs help:
+With helper classes you can have specific table items with various background and colors, [See here](/docs/helpers/color-setters), is the list of helper classes. for styling elements based on CSS background and color properties. For example, lets show which student was better and who needs help.
+
+To highlight a whole row or cell with a darker background, add the `.table-active` class to the `<tr>` or `<td>`.
 
 <PreviewBox
   height="325px"
@@ -344,7 +346,7 @@ With helper classes we can have specific table items with various background and
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Table</title>
 	</head>
 	<body>
@@ -395,9 +397,8 @@ With helper classes we can have specific table items with various background and
 '
 />
 
-```html {22,34,40} title="index.html"
-<table class="bordered horizontal">
-  <table class="bordered striped">
+```html {21,33,39} title="index.html"
+<table class="bordered striped">
     <thead>
       <tr>
         <th>Student</th>
@@ -438,26 +439,27 @@ With helper classes we can have specific table items with various background and
         <td class="style-success">98</td>
       </tr>
     </tbody>
-  </table>
 </table>
 ```
 
-### Customization
+## Customization
 
 Each table can be customized individually or customized settings can be set as a wrapper for tables, this approach is done with custom CSS properties aka "variables".
 FlatifyCSS consider these CSS variables for table customization:
 
-`--flatify__table-border-color`  
-`--flatify__table-bg-color`  
-`--flatify__table-bg-color-dark`  
-`--flatify__table-bg-color-darker`  
-`--flatify__table-txt-color`
+| Variable | Default |
+| --- | --- |
+| `--flatify__table-border-color` | `var(--flatify__bg-color-darker)` |
+| `--flatify__table-bg-color` | `var(--flatify__bg-color)` |
+| `--flatify__table-bg-color-dark` | `var(--flatify__bg-color-dark)` |
+| `--flatify__table-bg-color-darker` | `var(--flatify__bg-color-darker)` |
+| `--flatify__table-txt-color` | `var(--flatify__txt-color)` |
 
 :::info CSS variables prefix
 By default FlatifyCSS adds `flatify__` prefix to CSS variables to prevent unwanted conflicts, If you change `$CSS_VAR_PFX` in `_config.scss` instead of `flatify__`, variables will have your custom prefix: `--[your prefix]table-border-color`.
 :::
 
-Let's apply them in an example:
+Here is an example:
 
 <PreviewBox
 	height="325px"
@@ -468,7 +470,7 @@ Let's apply them in an example:
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Table</title>
 		<style>
 			.my-table{

@@ -1,0 +1,68 @@
+---
+title: Textarea
+sidebar_position: 6
+---
+
+import PreviewBox from "../../src/components/preview-box";
+
+The native `<textarea>` gets the same look as [inputs](/docs/forms/inputs), borders, colors, focus and validation states. You do not need any class for it, and if you want the browser default style back, add the `.default` class.
+
+<PreviewBox
+  height="200px"
+  children='
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
+		<title>Textarea</title>
+	</head>
+	<body>
+		<label for="my-textarea" class="form-label">Tell us your story</label>
+		<textarea id="my-textarea" rows="4" style="width:100%" placeholder="Once upon a time..."></textarea>
+	</body>
+</html>
+'
+/>
+
+```html title="index.html"
+<label for="my-textarea" class="form-label">Tell us your story</label>
+<textarea id="my-textarea" rows="4" placeholder="Once upon a time..."></textarea>
+```
+
+## Floating label
+
+Floating labels work for textareas too, add the `.is-textarea` class next to `.floating-label` on the `.input-wrapper`:
+
+<PreviewBox
+  height="200px"
+  children='
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
+		<title>Textarea</title>
+	</head>
+	<body>
+		<div class="input-wrapper is-textarea floating-label">
+			<textarea id="thoughts" name="thoughts" rows="4" style="width:100%" placeholder="What do you think?"></textarea>
+			<label for="thoughts" class="form-label">What do you think?</label>
+		</div>
+	</body>
+</html>
+'
+/>
+
+```html {1} title="index.html"
+<div class="input-wrapper is-textarea floating-label">
+  <textarea id="thoughts" name="thoughts" rows="4" placeholder="What do you think?"></textarea>
+  <label for="thoughts" class="form-label">What do you think?</label>
+</div>
+```
+
+## Sizes, colors and validation
+
+Textareas follow the same rules as inputs, so [size setter classes](/docs/helpers/size-setters), `style-` classes and the validation classes all work here. Read the [inputs page](/docs/forms/inputs#validation) for the details, and the [customization section](/docs/forms/inputs#customization) for the CSS variables.

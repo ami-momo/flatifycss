@@ -22,7 +22,7 @@ With `.active` and `.disabled` classes you can show active item of the list and 
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Menu</title>
 	</head>
 	<body>
@@ -61,7 +61,7 @@ By adding the `.flex-center` menu will be horizontal.
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Menu</title>
 	</head>
 	<body>
@@ -91,7 +91,7 @@ By adding the `.flex-center` menu will be horizontal.
 
 Submenu is the second level of menu. Generally it has show/hide functionality but inside [navigation bar](/docs/components/navbar) component.
 
-:::success Submenu arrow
+:::tip Submenu arrow
 Submenu can have arrow, you can use `.arrow-top`, `.arrow-bottom`, `.arrow-left`, `.arrow-right` classes for different directions.
 :::
 
@@ -104,7 +104,7 @@ Submenu can have arrow, you can use `.arrow-top`, `.arrow-bottom`, `.arrow-left`
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Menu</title>
 	</head>
 	<body>
@@ -138,37 +138,56 @@ Submenu can have arrow, you can use `.arrow-top`, `.arrow-bottom`, `.arrow-left`
 
 Menu, menu items and submenu have their own CSS variables to be customized, you see all possible options below.
 
-Menu items wrapper:  
-`--flatify__menu-bg-color`  
-`--flatify__menu-txt-color`  
-`--flatify__menu-border-color`
+Menu items wrapper:
 
-Menu items:  
-`--flatify__menu-active-item-bg-color`  
-`--flatify__menu-active-item-txt-color`  
-`--flatify__menu-item-bg-color`  
-`--flatify__menu-item-bg-color__hover`  
-`--flatify__menu-item-bg-color__focus`  
-`--flatify__menu-item-txt-color`  
-`--flatify__menu-item-txt-color__hover`  
-`--flatify__menu-item-txt-color__focus`
+| Variable | Default |
+| --- | --- |
+| `--flatify__menu-bg-color` | `var(--flatify__bg-color-dark)` |
+| `--flatify__menu-txt-color` | `var(--flatify__txt-color)` |
+| `--flatify__menu-border-color` | `var(--flatify__bg-color-darker)` |
 
-Submenu:  
-`--flatify__submenu-bg-color`  
-`--flatify__submenu-txt-color`  
-`--flatify__submenu-border-color`
+Menu items:
 
-Submenu items:  
-`--flatify__submenu-item-bg-color`  
-`--flatify__submenu-item-bg-color__hover`  
-`--flatify__submenu-item-bg-color__focus`  
-`--flatify__submenu-item-txt-color`  
-`--flatify__submenu-item-txt-color__hover`  
-`--flatify__submenu-item-txt-color__focus`
+| Variable | Default |
+| --- | --- |
+| `--flatify__menu-active-item-bg-color` | `var(--flatify__bg-color-darker)` |
+| `--flatify__menu-active-item-txt-color` | `var(--flatify__txt-color)` |
+| `--flatify__menu-item-bg-color` | `var(--flatify__bg-color-dark)` |
+| `--flatify__menu-item-bg-color__hover` | `var(--flatify__bg-color-dark)` |
+| `--flatify__menu-item-bg-color__focus` | `var(--flatify__bg-color-dark)` |
+| `--flatify__menu-item-txt-color` | `var(--flatify__txt-color)` |
+| `--flatify__menu-item-txt-color__hover` | `var(--flatify__txt-color)` |
+| `--flatify__menu-item-txt-color__focus` | `var(--flatify__txt-color)` |
+
+Submenu:
+
+| Variable | Default |
+| --- | --- |
+| `--flatify__submenu-bg-color` | `var(--flatify__bg-color)` |
+| `--flatify__submenu-txt-color` | `var(--flatify__txt-color)` |
+| `--flatify__submenu-border-color` | `var(--flatify__bg-color-darker)` |
+
+Submenu items:
+
+| Variable | Default |
+| --- | --- |
+| `--flatify__submenu-item-bg-color` | `var(--flatify__bg-color)` |
+| `--flatify__submenu-item-bg-color__hover` | `var(--flatify__bg-color-dark)` |
+| `--flatify__submenu-item-bg-color__focus` | `var(--flatify__bg-color-dark)` |
+| `--flatify__submenu-item-txt-color` | `var(--flatify__txt-color)` |
+| `--flatify__submenu-item-txt-color__hover` | `var(--flatify__txt-color)` |
+| `--flatify__submenu-item-txt-color__focus` | `var(--flatify__txt-color)` |
 
 Submenu animation (when they are inside [navigation bar](/docs/components/navbar)):  
-Change current animation:  
-`--flatify__submenu-animation-show-duration`  
-`--flatify__submenu-animation-show-delay`  
-Or set a new animation:  
-`--flatify__submenu-animation-show`
+Change current animation:
+
+| Variable | Default |
+| --- | --- |
+| `--flatify__submenu-animation-show-duration` | `350ms` |
+| `--flatify__submenu-animation-show-delay` | `200ms` |
+
+Or set a new animation:
+
+| Variable | Default |
+| --- | --- |
+| `--flatify__submenu-animation-show` | `flatify-dropdown-show var(--flatify__submenu-animation-show-duration) var(--flatify__submenu-animation-show-delay) cubic-bezier(0.52, 0.42, 0.44, 1.44) both` |

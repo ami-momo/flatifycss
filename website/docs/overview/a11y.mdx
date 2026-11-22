@@ -5,7 +5,7 @@ sidebar_position: 7
 
 import Picture from "../../src/components/picture";
 
-FlatifyCSS respects accessibility. For documentation, attributes like `aria-` are included with examples and there is always a note for accessibilty.
+FlatifyCSS respects accessibility. For documentation, attributes like `aria-` are included with examples and there is always a note for accessibility.
 
 ## Assistive technologies
 
@@ -19,7 +19,7 @@ Users who prefer keyboard to navigate are important, so FlatifyCSS considers the
 ## Reduced motion
 
 Based on [this article](https://css-tricks.com/introduction-reduced-motion-media-query/): "Vestibular disorders can cause your vestibular system to struggle to make sense of what is happening, resulting in loss of balance and vertigo, migraines, nausea, and hearing loss. Anyone who has spun around too quickly is familiar with a confused vestibular system."  
-As web developers, we should consider this and define or reset current animation and transitions with limited movement.  
+As web developers, you should consider this and define or reset current animation and transitions with limited movement.  
 In favor of [prefers-reduced-motion media feature](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion), it is possible to know if the user wants reduced motion or not.
 
 FlatifyCSS takes these facts over, inside `a11y.scss` file these rules are applied:
@@ -29,14 +29,14 @@ FlatifyCSS takes these facts over, inside `a11y.scss` file these rules are appli
 Depends on [web.dev article](https://web.dev/prefers-reduced-motion/):  
 "There are decorative effects like animated gradients, parallax scrolling, background videos, and several others. While many users enjoy such animations, some users dislike them because they feel distracted or slowed down by them. In the worst case, users may even suffer from motion sickness as if it were a real life experience, so for these users reducing animations is a medical necessity."
 
-We fix the issue with: `background-attachment: initial;`
+The fix is: `background-attachment: initial;`
 
 ### Transitions
 
-No transition is necessary for reduced motion so we reset FlatifyCSS defined transitions duration to 0:
-`-flatify__simple-transition`  
-`-flatify__long-transition`  
-`-flatify__bouncing-transition`
+No transition is necessary for reduced motion so FlatifyCSS resets the duration of its transitions to 0:
+`--flatify__simple-transition`  
+`--flatify__long-transition`  
+`--flatify__bouncing-transition`
 
 ### Animations
 
@@ -47,7 +47,7 @@ No transition is necessary for reduced motion so we reset FlatifyCSS defined tra
   alt="Optimized reduced motion for loading component"
 />
 
-We use `flatify-fade-in`, `flatify-fade-in-out` and `flatify-fade-out` animations instead of primary, also it is a good practice to limit animation steps for complex animations like what we do for [spinner loadings](/docs/components/loading):
+FlatifyCSS uses `flatify-fade-in`, `flatify-fade-in-out` and `flatify-fade-out` animations instead of primary, also it is a good practice to limit animation steps for complex animations like the [spinner loadings](/docs/components/loading):
 
 ## Visual disabilities
 
@@ -55,7 +55,7 @@ The [palette](/docs/overview/colors) is wide enough to handle basic functionalit
 
 ### Color blindness simulation
 
-The Mozilla Firefox browser has a great [accessibility panel](https://developer.mozilla.org/en-US/docs/Tools/Accessibility_inspector/Simulation) that simulates [diffrent types of color blindness](https://www.color-blindness.com/types-of-color-blindness/), you can easily check contrast issues and fix them besides other helpful tools like keyboard and text labels checker.
+The Mozilla Firefox browser has a great [accessibility panel](https://developer.mozilla.org/en-US/docs/Tools/Accessibility_inspector/Simulation) that simulates [different types of color blindness](https://www.color-blindness.com/types-of-color-blindness/), you can easily check contrast issues and fix them besides other helpful tools like keyboard and text labels checker.
 
 <Picture
   spacing="1.5em"
@@ -96,8 +96,8 @@ The Mozilla Firefox browser has a great [accessibility panel](https://developer.
   spacing="1.5em"
   background="white"
   src="/img/docs/a11y/color-contrast-loss.jpg"
-  alt="Visual disabilities - Constrast loss"
-  desc="Constrast loss"
+  alt="Visual disabilities - Contrast loss"
+  desc="Contrast loss"
 />
 
 ### High contrast
@@ -158,7 +158,7 @@ A typical link for a user with the contrast loss issue will be hard to find:
 
 <Picture spacing="1.5em" src="/img/docs/a11y/link-default.png" alt="Default link" />
 
-Nonetheless, we can customize links `color` and `text-decoration` to be more accessible: 
+Nonetheless, you can customize links `color` and `text-decoration` to be more accessible: 
 
 ```scss title="_config.scss"
 // color

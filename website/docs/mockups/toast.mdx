@@ -15,7 +15,7 @@ In this page, the toast mockup is presented, but appending the functionality is 
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify.css" />
 		<title>Toasts</title> 
 	</head>
 	<body>
@@ -78,7 +78,7 @@ You can change toasts wrapper element position by adding x-axis classes: `left`,
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify.css" />
 		<title>Toasts</title> 
 	</head>
 	<body>
@@ -120,7 +120,7 @@ These classes just set a `font-size` property so it is possible to change it you
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify.css" />
 		<title>Toasts</title> 
 	</head>
 	<body>
@@ -161,7 +161,7 @@ There are helper classes for styling elements, first read about [color setter cl
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify.css" />
 		<title>Toasts</title> 
 	</head>
 	<body>
@@ -212,9 +212,11 @@ There are helper classes for styling elements, first read about [color setter cl
 
 Use CSS variables for customization, they can be set as `:root` for all toasts default style or just for a specific selector.
 
-`--flatify__toast-txt-color`  
-`--flatify__toast-bg-color`  
-`--flatify__toast-border-color`  
-`--flatify__toast-inner-space`  
-`--flatify__toast-animation-show`  
-`--flatify__toast-animation-hide`
+| Variable | Default |
+| --- | --- |
+| `--flatify__toast-txt-color` | `var(--flatify__txt-color)` |
+| `--flatify__toast-bg-color` | `var(--flatify__bg-color)` |
+| `--flatify__toast-border-color` | `var(--flatify__bg-color-darker)` |
+| `--flatify__toast-inner-space` | `2.5em` |
+| `--flatify__toast-animation-show` | `flatify-slide-up-in-min var(--flatify__toast-animation-show-duration) ease` |
+| `--flatify__toast-animation-hide` | `flatify-slide-down-out-min var(--flatify__toast-animation-hide-duration) ease both` |

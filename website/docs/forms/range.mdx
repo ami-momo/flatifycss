@@ -1,0 +1,51 @@
+---
+title: Range
+sidebar_position: 7
+---
+
+import PreviewBox from "../../src/components/preview-box";
+
+The native `<input type="range">` gets a flat track and a square-ish thumb that goes a bit darker on hover and shrinks a little while you drag it. Users who prefer reduced motion do not get the shrink. Add the `.default` class to keep the browser style.
+
+<PreviewBox
+  height="120px"
+  children='
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
+		<title>Range</title>
+	</head>
+	<body>
+		<label for="volume" class="form-label">Volume</label>
+		<input type="range" id="volume" min="0" max="100" value="40" />
+	</body>
+</html>
+'
+/>
+
+```html title="index.html"
+<label for="volume" class="form-label">Volume</label>
+<input type="range" id="volume" min="0" max="100" value="40" />
+```
+
+The range takes the full width of its parent, wrap it in an element with a fixed width if you want it shorter.
+
+## Customization
+
+The range uses the same CSS variables as other form elements:
+
+| Variable | Default | Used for |
+| --- | --- | --- |
+| `--flatify__form-element-bg-color` | `var(--flatify__bg-color-dark)` | Thumb background |
+| `--flatify__form-element-border-color` | `var(--flatify__bg-color-darker)` | Track and thumb border |
+| `--flatify__form-element-border-color__focus` | `var(--flatify__form-element-accent-color)` | Thumb border on focus |
+
+```css title="style.css"
+.my-range {
+  --flatify__form-element-bg-color: #ffce54;
+  --flatify__form-element-border-color: #f6bb42;
+}
+```

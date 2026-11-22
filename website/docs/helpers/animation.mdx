@@ -67,7 +67,7 @@ animation: my-animation-name ease 1s infinite;
 
 ### Misc
 
-These animations are just special to thier usecases:
+These animations are just special to their usecases:
 
 `flatify-processing` The animation for [progress bar processing state](/docs/components/progress#processing).
 
@@ -86,26 +86,30 @@ These animations are just special to thier usecases:
 
 It is possible to change the animation state with helper classes, for example, play, pause, or stop.
 
-These are helper classes that you can use:  
-`.no-transition` Remove transition for an element.  
-`.no-animation` Remove aniamtion for an element.
+These are helper classes that you can use:
 
-`.play-animation` Play current animation  
-`.pause-animation` Pause current animation  
-`.stop-animation` Stop the animation
+| Class | What it does |
+| --- | --- |
+| `.no-transition` | Removes transitions of an element |
+| `.no-animation` | Removes animations of an element |
+| `.play-animation` | Plays the current animation |
+| `.pause-animation` | Pauses the current animation |
+| `.stop-animation` | Stops the animation |
 
 ## Animation classes
 
 Some predefined classes help you set animations directly:
 
-`.anim-hue` (infinite)  
-`.anim-hue-min` (infinite)  
-`.anim-spin` (infinite)  
-`.anim-pulse` (infinite)
-`.anim-heart` (infinite)  
-`.anim-required` Heart animation but repeats just two times.  
-`.anim-fade-in` (one time)  
-`.anim-fade-out` (one time)
+| Class | Animation | Repeats |
+| --- | --- | --- |
+| `.anim-hue` | `flatify-hue` | infinite |
+| `.anim-hue-min` | `flatify-hue-min` | infinite |
+| `.anim-spin` | `flatify-spin` | infinite |
+| `.anim-pulse` | `flatify-pulse` | infinite |
+| `.anim-heart` | `flatify-heart` | infinite |
+| `.anim-required` | `flatify-heart` | two times |
+| `.anim-fade-in` | `flatify-fade-in` | one time |
+| `.anim-fade-out` | `flatify-fade-out` | one time |
 
 <PreviewBox
   height="150px"
@@ -115,7 +119,7 @@ Some predefined classes help you set animations directly:
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Animations</title>
         <style>
             .my-box{

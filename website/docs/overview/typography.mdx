@@ -33,9 +33,11 @@ Inside the `_config.scss` there is a section for typography configuration.
 FlatifyCSS set the main font size as the `:root` property, but it depends on the screen size. So there are two variables to set minimum and maximum font sizes inside `_config.scss`:
 
 ```scss title="_config.scss"
-$MIN_FONT_SIZE: 14; // must be without unit
-$MAX_FONT_SIZE: 16; // must be without unit
+$MIN_FONT_SIZE: 85% !default; // must be percent
+$MAX_FONT_SIZE: 100% !default; // must be percent
 ```
+
+On small screens (up to the `xs` breakpoint) the root font size is the minimum, from `xl` and up it is the maximum, and between them it grows smoothly with the screen width. You can also change them with the `--flatify__min-font-size` and `--flatify__max-font-size` CSS variables.
 
 Based on this fluid font size you can use the `em` unit to have the responsive font size and elements, also using `em` as a unit for elements property gives you better control of the element size, you do not have to change every property to change the element size, just change the `font-size` property for the element wrapper, this is how [size setter helper classes](/docs/helpers/size-setters) work.
 
@@ -57,7 +59,7 @@ you can also change them as CSS variables:
 --flatify__code-font-family: "Fira Code", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 ```
 
-### Font size
+### Size classes
 
 There are [helper classes](/docs/helpers/size-setters) to change the size of elements, they change the font size based on their size, you can change them to your own sizes:
 
@@ -76,7 +78,7 @@ $FONT_SIZE_LIST: (
 
 ### Font weight
 
-You can change default font weights based on the typeface your are using:
+You can change default font weights based on the typeface you are using:
 
 ```scss title="_config.scss"
 $MEDIUM_FONT_WEIGHT: 600;
@@ -96,7 +98,7 @@ or change their CSS variables:
 
 ### Line height
 
-Based on the element line height will be different, you can default line heights with these variables:
+Based on the element line height will be different, you can change default line heights with these variables:
 
 ```scss title="_config.scss"
 $BASE_LINE_HEIGHT: 1.5;
@@ -111,3 +113,30 @@ or change their CSS variables:
 --flatify__small-line-height: 1.2;
 --flatify__large-line-height: 1.8;
 ```
+
+## All typography variables
+
+Here is every typography setting in one place. Change the Sass variable if you build FlatifyCSS yourself, or the CSS variable if you use the compiled CSS.
+
+| Sass variable | CSS variable | Default |
+| --- | --- | --- |
+| `$MIN_FONT_SIZE` | `--flatify__min-font-size` | `85%` |
+| `$MAX_FONT_SIZE` | `--flatify__max-font-size` | `100%` |
+| `$PRIMARY_FONT_FAMILY` | `--flatify__primary-font-family` | `"Nunito", sans-serif` |
+| `$HEADING_FONT_FAMILY` | `--flatify__heading-font-family` | `$PRIMARY_FONT_FAMILY` |
+| `$CODE_FONT_FAMILY` | `--flatify__code-font-family` | `"Fira Code", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace` |
+| `$MEDIUM_FONT_WEIGHT` | `--flatify__medium-font-weight` | `600` |
+| `$BOLD_FONT_WEIGHT` | `--flatify__bold-font-weight` | `700` |
+| `$EXTRA_BOLD_FONT_WEIGHT` | `--flatify__extra-bold-font-weight` | `900` |
+| `$HEADING_FONT_WEIGHT` | `--flatify__heading-font-weight` | `bold` |
+| `$HEADING_FONT_STYLE` | `--flatify__heading-font-style` | `normal` |
+| `$HEADING_COLOR` | `--flatify__heading-color` | `currentColor` |
+| `$HEADING_MARGIN_BOTTOM` | `--flatify__heading-mb` | `0.5em` |
+| `$PARAGRAPH_MARGIN_BOTTOM` | `--flatify__paragraph-mb` | `2em` |
+| `$BASE_LINE_HEIGHT` | `--flatify__base-line-height` | `1.5` |
+| `$SMALL_LINE_HEIGHT` | `--flatify__small-line-height` | `1.2` |
+| `$LARGE_LINE_HEIGHT` | `--flatify__large-line-height` | `1.8` |
+| `$BODY_TEXT_ALIGN` | `--flatify__body-text-align` | `initial` |
+| `$LINK_DECORATION` | `--flatify__link-decoration` | `none` |
+| `$LINK_DECORATION_HOVER` | `--flatify__link-decoration__hover` | `underline 0.125em currentColor` |
+| `$LINK_DECORATION_FOCUS` | `--flatify__link-decoration__focus` | `none` |

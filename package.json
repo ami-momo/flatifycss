@@ -1,51 +1,72 @@
 {
   "name": "flatifycss",
   "version": "2.0.0",
-  "description": "Modern flat design framework for the web — inspired by Duolingo design system.",
-  "main": "index.html",
+  "description": "Modern flat design framework for the web, inspired by Duolingo design system.",
+  "main": "dist/js/flatify.js",
+  "style": "dist/css/flatify.css",
+  "sass": "scss/flatify.scss",
+  "unpkg": "dist/css/flatify-min.css",
+  "jsdelivr": "dist/css/flatify-min.css",
+  "files": [
+    "dist",
+    "scss",
+    "js",
+    "ATTRIBUTION.md"
+  ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/amir2mi/flatifycss.git"
+    "url": "git+https://github.com/ami-momo/flatifycss.git"
   },
   "scripts": {
-    "build": "gulp",
+    "build": "gulp build",
     "watch": "gulp watch",
-    "release": "gulp release"
+    "release": "gulp release",
+    "docs:start": "bun run --cwd website start",
+    "docs:build": "bun run --cwd website build"
   },
   "keywords": [
     "css",
+    "sass",
+    "css-framework",
     "duolingo",
     "flat",
     "flat-design",
-    "front-end"
+    "design-system",
+    "front-end",
+    "rtl",
+    "accessibility"
   ],
   "author": "Amir M. Mohamadi",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/amir2mi/FlatifyCSS/issues"
+    "url": "https://github.com/ami-momo/flatifycss/issues"
   },
-  "homepage": "https://flatifycss.com/",
+  "homepage": "https://flatifycss.amimomo.me",
   "devDependencies": {
-    "@babel/core": "^7.16.0",
-    "@babel/preset-env": "^7.16.4",
-    "autoprefixer": "^10.3.7",
-    "cssnano": "^5.0.8",
-    "gulp": "^4.0.2",
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "autoprefixer": "10.4.0",
+    "cssnano": "^5.1.15",
+    "gulp": "^5.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-bump": "^3.2.0",
     "gulp-concat": "^2.6.1",
-    "gulp-git": "^2.10.1",
     "gulp-noop": "^1.0.1",
-    "gulp-postcss": "^9.0.1",
+    "gulp-postcss": "^10.0.0",
     "gulp-rename": "^2.0.0",
-    "gulp-sass": "^5.0.0",
-    "gulp-sourcemaps": "^3.0.0",
+    "gulp-sass": "^6.0.0",
     "gulp-uglify": "^3.0.2",
-    "postcss": "^8.4.4",
-    "sass": "^1.43.4",
-    "webpack": "^5.65.0",
+    "postcss": "^8.4.49",
+    "sass": "~1.78.0",
+    "semver": "^7.6.3",
+    "vinyl-sourcemap": "^2.0.0",
+    "webpack": "^5.97.0",
     "webpack-stream": "^7.0.0",
-    "yargs": "^17.3.0"
+    "yargs": "^17.7.2"
   },
-  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+  "overrides": {
+    "decode-uri-component": "^0.2.2",
+    "trim-newlines": "^3.0.1"
+  },
+  "packageManager": "bun@1.4.5"
 }

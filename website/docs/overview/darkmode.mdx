@@ -1,6 +1,6 @@
 ---
 title: Dark mode
-sidebar_position: 8.5
+sidebar_position: 9
 ---
 
 If you use Sass to develop, there is a predefined placeholder selector for dark mode, this file is in `/scss/helpers/_dark-mode.scss`, in this file the `%dark-mode` selector is defined you can create your selectors by extending it.  
@@ -12,28 +12,40 @@ html.dark {
 }
 ```
 
-or you can detect automatically if users prefer dark theme with [CSS `@media` feature](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme):
-
-```scss title="style.scss"
-@media (prefers-color-scheme: dark) {
-  :root {
-    @extend %dark-mode;
-  }
-}
-```
-
-Now if the `<html>` tag has the `.dark` class or the user prefers to have a dark theme, the dark mode will be applied.  
+Now if the `<html>` tag has the `.dark` class, the dark mode will be applied.  
 Note that you should extend this selector as `<html>` tag because it changes CSS variables that are defined as the `:root`.
 
-Simply by extending, it will change some CSS variables for dark mode state. Like this:
+:::warning Placeholder selectors do not work inside media queries
+Sass does not let you `@extend` a selector from inside `@media`, so something like `@media (prefers-color-scheme: dark) { :root { @extend %dark-mode; } }` stops the build with an error. If you want to follow the user's system theme, use the CSS variables below instead.
+:::
 
-```css title="style.scss"
+## Without Sass
+
+The compiled CSS files do not include a dark theme, because `%dark-mode` is a Sass placeholder and placeholders are only printed when you extend them. That is not a problem, dark mode is just a set of CSS variables, so you can write it yourself.
+
+Here is what `%dark-mode` does, it is also the way to detect automatically if users prefer dark theme with [CSS `@media` feature](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme):
+
+```css title="style.css"
 @media (prefers-color-scheme: dark) {
   :root {
-    // Increase brightness
+    /* Lighter primary colors */
+    --flatify__color-blue-primary: #3ebcf7;
+    --flatify__color-green-primary: #71d428;
+    --flatify__color-yellow-primary: #ffe326;
+    --flatify__color-orange-primary: #ffa626;
+    --flatify__color-red-primary: #ff6666;
+    --flatify__color-pink-primary: #ff98d7;
+    --flatify__color-purple-primary: #ca7bff;
+    --flatify__color-accent-primary: #3ebcf7;
+    --flatify__color-success-primary: #71d428;
+    --flatify__color-info-primary: #3ebcf7;
+    --flatify__color-warning-primary: #ffa626;
+    --flatify__color-danger-primary: #ff6666;
+
+    /* Increase brightness */
     --flatify__hover-brightness: 110%;
 
-    // Background color
+    /* Background color */
     --flatify__bg-color: #10191c !important;
     --flatify__bg-color-dark: #141f23 !important;
     --flatify__bg-color-darker: #263b43 !important;
@@ -42,7 +54,7 @@ Simply by extending, it will change some CSS variables for dark mode state. Like
     --flatify__color-light-primary: #10191c !important;
     --flatify__color-light-dark: #263b43 !important;
 
-    // Text color
+    /* Text color */
     --flatify__txt-color: #f1f4f7;
     --flatify__txt-color-dark: #ced9e3;
     --flatify__txt-color-darker: #809cb6;
@@ -53,3 +65,7 @@ Simply by extending, it will change some CSS variables for dark mode state. Like
   }
 }
 ```
+
+Want a toggle button instead? Put the same variables inside `html.dark { ... }` and add or remove the `.dark` class with JavaScript.
+
+The primary colors above are 15% lighter than the defaults, so they stay readable on a dark background. If you changed the palette, lighten your own colors the same way.

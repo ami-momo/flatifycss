@@ -4,7 +4,7 @@ title: Blockquote
 
 import PreviewBox from "../../src/components/preview-box";
 
-### Default
+## Default
 
 To write a quote FlatifyCSS gives two types of `<blockquote>`s, first one is a default blockquote:
 
@@ -21,7 +21,7 @@ To hide blockquote icon add `.no-icon` to the `<blockquote>` element.
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Quote</title>
 	</head>
 	<body>
@@ -67,7 +67,7 @@ To hide blockquote icon add `.no-icon` to the `<blockquote>` element.
 </blockquote>
 ```
 
-### Large
+## Large
 
 To have a large blockquote add `.large` to the blockquote.
 
@@ -80,7 +80,7 @@ To have a large blockquote add `.large` to the blockquote.
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Quote</title>
 	</head>
 	<body>
@@ -101,9 +101,15 @@ To have a large blockquote add `.large` to the blockquote.
 <blockquote class="large">...</blockquote>
 ```
 
-### Customization
+Large blockquotes are centered. If you want the text to start from the side like normal text, add the `.text-align-fill` class too:
 
-Blockquotes can have different accent colors or use [color setter classes](docs/helpers/color-setters).
+```html title="index.html"
+<blockquote class="large text-align-fill">...</blockquote>
+```
+
+## Customization
+
+Blockquotes can have different accent colors or use [color setter classes](/docs/helpers/color-setters).
 
 <PreviewBox
 	height="580px"
@@ -114,7 +120,7 @@ Blockquotes can have different accent colors or use [color setter classes](docs/
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Quote</title>
         <style>
             .my-blockquote{
@@ -167,7 +173,7 @@ Blockquotes can have different accent colors or use [color setter classes](docs/
 }
 ```
 
-### Change quote icon
+## Change quote icon
 
 It is possible to change the blockquote icon with both `_config.scss` and CSS variables.
 

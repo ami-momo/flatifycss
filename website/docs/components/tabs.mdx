@@ -4,7 +4,7 @@ title: Tabs
 
 import PreviewBox from "../../src/components/preview-box";
 
-With Tabs we can have different layers of content in the same place, users can choose which layer they want to see. To use tabs, it is necessary to load the JavaScript file of FlatifyCSS, so without this file, you just have the component which does not work on click.
+With Tabs you can have different layers of content in the same place, users can choose which layer they want to see. To use tabs, it is necessary to load the JavaScript file of FlatifyCSS, so without this file, you just have the component which does not work on click.
 
 ## A simple tabs component
 
@@ -19,9 +19,9 @@ Each tabs component is wrapped with `.tabs-wrapper` (which is not necessary), th
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Tabs</title>
-        <script src="https://raw.githack.com/amir2mi/flatifycss/master/dist/js/flatify-min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/js/flatify-min.js"></script>
     </head>
     <body class="flex-column-center">
 		<div class="tabs-wrapper">
@@ -55,7 +55,7 @@ Each tabs component is wrapped with `.tabs-wrapper` (which is not necessary), th
 />
 
 :::info Accessibility matters!
-Try to apply guides for a perfect tab component, first read [W3C Working Groups Notes about tabs](https://www.w3.org/TR/wai-aria-practices/#tabpanel). The code of the example above has done the things that you should do, for example, the active tab button will get `aria-selected="true"` automatically, you just need to determine the basics `aria-` HTML attributes.
+Try to apply guides for a perfect tab component, first read [the ARIA Authoring Practices Guide about tabs](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/). The code of the example above has done the things that you should do, for example, the active tab button will get `aria-selected="true"` automatically, you just need to determine the basics `aria-` HTML attributes.
 :::
 
 ```html title="index.html"
@@ -101,9 +101,9 @@ You can add `.line-at-top` class to the `.tabs-header` to change tab indicator l
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Tabs</title>
-        <script src="https://raw.githack.com/amir2mi/flatifycss/master/dist/js/flatify-min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/js/flatify-min.js"></script>
     </head>
     <body class="flex-column-center">
 		<div class="tabs-wrapper">
@@ -148,9 +148,9 @@ By adding `.flex-center` class to the `.tabs-header` element, tabs will be cente
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Tabs</title>
-        <script src="https://raw.githack.com/amir2mi/flatifycss/master/dist/js/flatify-min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/js/flatify-min.js"></script>
     </head>
     <body class="flex-column-center">
 		<div class="tabs-wrapper">
@@ -195,9 +195,9 @@ It is also possible to have a bordered tabs component, add `.bordered` class to 
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Tabs</title>
-        <script src="https://raw.githack.com/amir2mi/flatifycss/master/dist/js/flatify-min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/js/flatify-min.js"></script>
     </head>
     <body class="flex-column-center">
 		<div class="tabs-wrapper bordered">
@@ -242,9 +242,9 @@ All of a sudden you might have a lot of tabs and you do not want them to break i
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Tabs</title>
-        <script src="https://raw.githack.com/amir2mi/flatifycss/master/dist/js/flatify-min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/js/flatify-min.js"></script>
     </head>
     <body>
 		<div class="tabs-wrapper bordered">
@@ -298,26 +298,34 @@ By the way, it is possible to use a brand new animation to show/hide tabs, you c
 
 ### Predefined animations
 
+With `.slide-animation`, the JavaScript adds `.slide-left` or `.slide-right` to the panels based on the position of the clicked tab, so panels slide in from the correct side. While a panel is going away it also has the `.tab-will-be-hidden` class, handy if you write your own animation.
+
 `.slide-animation`  
 `.fade-animation`  
 `.no-animation`
 
 ### Custom animations
 
-To change current animations duration:  
-`--flatify__tab-animation-show-duration`  
-`--flatify__tab-animation-hide-duration`
+To change current animations duration:
 
-Or set custom animations:  
-`--flatify__tab-animation-show`  
-`--flatify__tab-animation-hide`
+| Variable | Default |
+| --- | --- |
+| `--flatify__tab-animation-show-duration` | `300ms` |
+| `--flatify__tab-animation-hide-duration` | `200ms` |
+
+Or set custom animations:
+
+| Variable | Default |
+| --- | --- |
+| `--flatify__tab-animation-show` | `flatify-blow-in var(--flatify__tab-animation-show-duration) ease` |
+| `--flatify__tab-animation-hide` | `flatify-blow-out var(--flatify__tab-animation-hide-duration) cubic-bezier(0.52, 0.42, 0.44, 1.44) both` |
 
 :::danger Do not use `none` for animations!
 Never use `none` for these kinds of animations, because FlatifyCSS JavaScript listens to [animationend event](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/animationend_event), so if you set `none` there won't be an animation, it means `animationend` is not going to be triggered. If you want to disable an animation just set `animation-duration` to `0s`.  
 The example could be:
 
 ```css title="style.css"
-.no-animation-accordion {
+.no-animation-tabs {
   --flatify__tab-animation-show: flatify-fade-in 0s;
   --flatify__tab-animation-hide: flatify-fade-out 0s;
 }
@@ -338,7 +346,7 @@ Check out the examples below to understand use cases:
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Tabs</title>
 		<style>
 			@keyframes my-asteroid-anim-show{
@@ -380,7 +388,7 @@ Check out the examples below to understand use cases:
 				--flatify__tab-animation-hide: my-slide-bottom-anim-hide 0.2s linear;
 			}
 		</style>
-        <script src="https://raw.githack.com/amir2mi/flatifycss/master/dist/js/flatify-min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/js/flatify-min.js"></script>
     </head>
     <body class="flex-column-center">
 		<h3>Slide animation</h3>
@@ -567,7 +575,7 @@ The examples above has the same HTML for different types, **the only point is th
 
 ### Animations for reduced motion users
 
-:::success Accessibility matters!
+:::tip Accessibility matters!
 For [reduced motion users](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion), all animations will be fade in/out.
 
 <div class="flex-center comparison-gifs">
@@ -596,9 +604,9 @@ These classes just set a `font-size` property so it is possible to change it you
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Tabs</title>
-        <script src="https://raw.githack.com/amir2mi/flatifycss/master/dist/js/flatify-min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/js/flatify-min.js"></script>
     </head>
     <body>
 		<div class="tabs-wrapper bordered size-xs">
@@ -697,9 +705,9 @@ There are helper classes for styling elements like tabs, first read about [color
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Tabs</title>
-        <script src="https://raw.githack.com/amir2mi/flatifycss/master/dist/js/flatify-min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/js/flatify-min.js"></script>
     </head>
     <body class="flex-column-center">
 		<div class="tabs-wrapper bordered style-dark-light">
@@ -787,19 +795,23 @@ There are helper classes for styling elements like tabs, first read about [color
 
 ## Customization
 
-FlatifyCSS has some CSS variables for customizing tabs, as we talked earlier about animations you can also change the colors of tabs with these variables.
+FlatifyCSS has some CSS variables for customizing tabs, as the animations above, you can also change the colors of tabs with these variables.
 
-`--flatify__tab-txt-color`  
-`--flatify__tab-bg-color`  
-`--flatify__tab-border-color`  
-`--flatify__color-accent-primary` (to customize active tab color)
+| Variable | Default | Notes |
+| --- | --- | --- |
+| `--flatify__tab-txt-color` | `var(--flatify__txt-color)` |  |
+| `--flatify__tab-bg-color` | `var(--flatify__bg-color)` |  |
+| `--flatify__tab-border-color` | `var(--flatify__bg-color-darker)` |  |
+| `--flatify__color-accent-primary` | `#1cb0f6` | Active tab color |
 
-and also animation CSS variables as [we talked about them above](#animations):
+and also animation CSS variables as [explained above](#animations):
 
-`--flatify__tab-animation-show-duration`  
-`--flatify__tab-animation-hide-duration`  
-`--flatify__tab-animation-show`  
-`--flatify__tab-animation-hide`
+| Variable | Default |
+| --- | --- |
+| `--flatify__tab-animation-show-duration` | `300ms` |
+| `--flatify__tab-animation-hide-duration` | `200ms` |
+| `--flatify__tab-animation-show` | `flatify-blow-in var(--flatify__tab-animation-show-duration) ease` |
+| `--flatify__tab-animation-hide` | `flatify-blow-out var(--flatify__tab-animation-hide-duration) cubic-bezier(0.52, 0.42, 0.44, 1.44) both` |
 
 <PreviewBox
   height="200px"
@@ -810,7 +822,7 @@ and also animation CSS variables as [we talked about them above](#animations):
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/css/flatify-min.css" />
 		<title>Tabs</title>
 		<style>
 			.my-custom-tabs{
@@ -820,7 +832,7 @@ and also animation CSS variables as [we talked about them above](#animations):
 				--flatify__color-accent-primary: #FFCE54;
 			}
 		</style>
-        <script src="https://raw.githack.com/amir2mi/flatifycss/master/dist/js/flatify-min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatifycss@2/dist/js/flatify-min.js"></script>
     </head>
     <body class="flex-column-center">
 		<div class="tabs-wrapper bordered my-custom-tabs">

@@ -1,7 +1,7 @@
 :root {
   --#{$CSS_VAR_PFX}backdrop-priority: #{$ZINDEX_BACKDROP};
   --#{$CSS_VAR_PFX}backdrop-color: var(--#{$CSS_VAR_PFX}txt-color);
-  --#{$CSS_VAR_PFX}backdrop-opacity: 0.5;
+  --#{$CSS_VAR_PFX}backdrop-opacity: #{$BACKDROP_OPACITY};
   --#{$CSS_VAR_PFX}backdrop-filter: none;
 
   --#{$CSS_VAR_PFX}modal-backdrop-color: var(--#{$CSS_VAR_PFX}backdrop-color);

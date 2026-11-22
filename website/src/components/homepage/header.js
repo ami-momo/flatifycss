@@ -1,11 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "@docusaurus/Link";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import "./header.css";
 
 export default function HomepageHeader() {
-  const { siteConfig } = useDocusaurusContext();
-  const version = siteConfig.customFields?.version;
+  const [stableVersion, setStableVersion] = useState();
+
+  // The latest GitHub release is fetched when the page loads, so a new release
+  // shows up without rebuilding the docs. Nothing is shown if the request fails.
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await fetch("https://api.github.com/repos/ami-momo/flatifycss/releases");
+        const data = await response.json();
+        if (Array.isArray(data) && data[0]?.tag_name) setStableVersion(data[0].tag_name.replace("v", ""));
+      } catch {
+        // offline or rate limited, the version line is optional
+      }
+    }
+    fetchData();
+  }, []);
 
   return (
     <div className="homepage-header">
@@ -24,17 +37,15 @@ export default function HomepageHeader() {
       >
         React FlatifyCSS
       </a>
-      {version && (
-        <a
-          style={{ display: "block" }}
-          href="https://github.com/ami-momo/flatifycss/releases"
-          rel="nofollow noopener"
-          target="_blank"
-          className={`size-sm opacity-60 color-dark`}
-        >
-          Last stable release: {version}
-        </a>
-      )}
+      <a
+        style={{ display: "block" }}
+        href="https://github.com/ami-momo/flatifycss/releases"
+        rel="nofollow noopener"
+        target="_blank"
+        className={`size-sm opacity-60 color-dark`}
+      >
+        {stableVersion && <span className="anim-fade-in"> Last stable release: {stableVersion}</span>}
+      </a>
     </div>
   );
 }

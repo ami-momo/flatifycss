@@ -2,7 +2,6 @@
 // Note: type annotations allow type checking and IDEs autocompletion
 
 const { themes: prismThemes } = require("prism-react-renderer");
-const { version } = require("../package.json");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -26,10 +25,6 @@ const config = {
   i18n: {
     defaultLocale: "en",
     locales: ["en"],
-  },
-
-  customFields: {
-    version,
   },
 
   presets: [

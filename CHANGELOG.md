@@ -2,6 +2,16 @@
 
 All notable changes to this project are documented here. The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and this project follows [Semantic Versioning](https://semver.org/).
 
+## [Unreleased]
+
+### Changed
+
+- Moved the manual playground from `test.html` to `examples/playground.html`.
+
+### Fixed
+
+- The playground logo now loads from the repository instead of an old local file path.
+
 ## [2.0.1] - 2026-11-22
 
 Nothing new to learn, a few fixes and a new home for the docs.

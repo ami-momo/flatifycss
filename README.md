@@ -139,6 +139,8 @@ I use [Bun](https://bun.sh/) for everything here.
 2. Run `bun run build` to compile the stylesheet and JavaScript file into `/dist`
 3. Run `bun run watch` while you work
 
+After building, open [examples/playground.html](examples/playground.html) in your browser to try the components with the local CSS and JavaScript.
+
 The documentation website is in `/website`, run `bun install` and `bun start` there. For more information about FlatifyCSS's Gulp tasks, [read here](https://flatifycss.amimomo.me/docs/overview/development#gulp-tasks).
 
 ## Contributing
